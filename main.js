@@ -4,6 +4,10 @@ var app = (function () {
   var currentIndex = 0;
   var zipUrl =
     "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V1.3.zip?v=1682956533885"; // Set to '' if you don't wnat to allow download of the zip
+  let removeGames = [];
+  if (localStorage.getItem("removeGames")) {
+    removeGames = JSON.parse(localStorage.getItem("removeGames"));
+  }
 
   var musicNameList = [
     //// Etrian Odyssey 1
@@ -283,6 +287,8 @@ var app = (function () {
     // https://vgmdb.net/album/130629
     "Battlefield: Perish Like the Dew [Normal Battle: Last Stratum] - Etrian Odyssey Origins Collection : Etrian Odyssey 3",
   ];
+  let filteredMusicNameList = [];
+
   // Bug : Sometimes musics stops appearing in suggestions, it seems that musics dissapears at the end of the array
   // Adding empty string makes them unfindable and prevent this bug
   musicNameList = musicNameList.concat(
@@ -1553,6 +1559,8 @@ var app = (function () {
     },
   ];
   shuffleMusic();
+  let filteredMusicListWithLinks = [];
+  filterMusicLists();
   var firstLoad = true;
 
   fetch(zipUrl).then((r) => {
@@ -1561,9 +1569,9 @@ var app = (function () {
     }
   });
 
-  const Cn = ue(musicNameList),
+  const Cn = ue(filteredMusicNameList),
     On = {
-      subscribe: ue(musicListWithLinks, Pn).subscribe,
+      subscribe: ue(filteredMusicListWithLinks, Pn).subscribe,
     };
 
   ("use strict");
@@ -1582,20 +1590,42 @@ var app = (function () {
 
   function nextMusic() {
     currentIndex += 1;
-    if (currentIndex >= musicListWithLinks.length) {
-      currentIndex = 0;
-      shuffleMusic();
-      firstLoad = true; // Problem: reset userStats
+    if (currentIndex >= filteredMusicListWithLinks.length) {
+      window.location.reload();
+    } else {
+      document.body.innerHTML = "";
+      new (class extends se {
+        constructor(e) {
+          super(), re(this, e, jn, En, i, {}, null, [-1, -1]);
+        }
+      })({
+        target: document.body,
+        props: {},
+      });
     }
-    document.body.innerHTML = "";
-    new (class extends se {
-      constructor(e) {
-        super(), re(this, e, jn, En, i, {}, null, [-1, -1]);
-      }
-    })({
-      target: document.body,
-      props: {},
-    });
+  }
+
+  function filterMusicLists() {
+    // Remove musics that are filtered out
+    let gameList = [...new Set(getGameOrArtistFromMusicName(musicNameList))];
+    let removedGameList = removeGames.map((i) => gameList[i]);
+    if (gameList.length == removedGameList.length) {
+      removeGames = [];
+      localStorage.setItem("removeGames", "[]"), (removedGameList = []);
+    }
+    filteredMusicNameList = musicNameList.filter(
+      (m) => !removedGameList.includes(getOneGameOrArtistFromMusic(m))
+    );
+    const idMusic = new Set(filteredMusicNameList);
+    filteredMusicListWithLinks = musicListWithLinks.filter((x) =>
+      idMusic.has(x.answer)
+    );
+  }
+
+  function saveFilteredGames(filteredGames) {
+    removeGames = filteredGames;
+    localStorage.setItem("removeGames", JSON.stringify(filteredGames)),
+      window.location.reload();
   }
 
   function t(e) {
@@ -2112,6 +2142,7 @@ var app = (function () {
               }
             );
       })(
+        // TODO Is it possible to remove google tag without breaking anything ?
         [
           {
             type: "script",
@@ -2336,8 +2367,34 @@ var app = (function () {
     };
   }
 
+  function filterIco(e) {
+    let t, r;
+    return {
+      c() {
+        (t = k("svg")),
+          (r = k("path")),
+          M(
+            r,
+            "d",
+            "M 2 5 C 2 3.34375 3.34375 2 5 2 L 19 2 C 20.65625 2 22 3.34375 22 5 L 22 6.171875 C 22 6.96875 21.683594 7.730469 21.121094 8.292969 L 15.292969 14.121094 C 15.105469 14.308594 15 14.5625 15 14.828125 L 15 17.171875 C 15 17.96875 14.683594 18.730469 14.121094 19.292969 L 11.917969 21.496094 C 10.84375 22.570312 9 21.808594 9 20.285156 L 9 14.828125 C 9 14.5625 8.894531 14.308594 8.707031 14.121094 L 2.878906 8.292969 C 2.316406 7.730469 2 6.96875 2 6.171875 Z M 2 5 "
+          ),
+          M(t, "xmlns", "http://www.w3.org/2000/svg"),
+          M(t, "width", "24"),
+          M(t, "height", "24"),
+          M(t, "viewBox", "0 0 24 24"),
+          M(t, "fill", "white");
+      },
+      m(e, i) {
+        g(e, t, i), p(t, r);
+      },
+      d(e) {
+        e && y(t);
+      },
+    };
+  }
+
   function ke(e) {
-    let t, n, r, s, i, o, a, l, u, c, d, h, f, m, b, ml, v;
+    let t, n, r, s, i, o, a, l, u, c, d, h, f, m, b, ml, bFilter, mFilter, v;
     return (
       (i = new ae({
         props: {
@@ -2394,6 +2451,17 @@ var app = (function () {
         },
       })),
       ml.$on("click", e[5]),
+      (mFilter = new ae({
+        props: {
+          $$slots: {
+            default: [filterIco],
+          },
+          $$scope: {
+            ctx: e,
+          },
+        },
+      })),
+      mFilter.$on("click", e[6]),
       {
         c() {
           (t = w("header")),
@@ -2413,6 +2481,8 @@ var app = (function () {
             Q(m.$$.fragment),
             (b = x()),
             Q(ml.$$.fragment),
+            (bFilter = x()),
+            Q(mFilter.$$.fragment),
             M(s, "class", "flex flex-1"),
             M(
               u,
@@ -2436,13 +2506,15 @@ var app = (function () {
             ee(i, s, null),
             p(s, o),
             ee(a, s, null),
+            p(s, f),
+            ee(m, s, null),
             p(r, l),
             p(r, u),
             p(r, c),
             p(r, d),
             ee(h, d, null),
-            p(d, f),
-            ee(m, d, null),
+            p(d, bFilter),
+            ee(mFilter, d, null),
             p(d, b),
             ee(ml, d, null),
             (v = !0);
@@ -2483,6 +2555,13 @@ var app = (function () {
               ctx: e,
             }),
             ml.$set(z);
+          const zFilter = {};
+          64 & t &&
+            (zFilter.$$scope = {
+              dirty: t,
+              ctx: e,
+            }),
+            mFilter.$set(zFilter);
         },
         i(e) {
           v ||
@@ -2491,6 +2570,7 @@ var app = (function () {
             Z(h.$$.fragment, e),
             Z(m.$$.fragment, e),
             Z(ml.$$.fragment, e),
+            Z(mFilter.$$.fragment, e),
             (v = !0));
         },
         o(e) {
@@ -2499,10 +2579,11 @@ var app = (function () {
             q(h.$$.fragment, e),
             q(m.$$.fragment, e),
             q(ml.$$.fragment, e),
+            q(mFilter.$$.fragment, e),
             (v = !1);
         },
         d(e) {
-          e && y(t), te(i), te(a), te(h), te(m), te(ml);
+          e && y(t), te(i), te(a), te(h), te(m), te(ml), te(mFilter);
         },
       }
     );
@@ -2548,6 +2629,12 @@ var app = (function () {
         n("music-list", "music list"),
           pe("clickMusicList", {
             name: "clickMusicList",
+          });
+      },
+      () => {
+        n("filter", "Filter"),
+          pe("clickFilter", {
+            name: "clickFilter",
           });
       },
     ];
@@ -5332,7 +5419,10 @@ var app = (function () {
               : M(
                   i,
                   "class",
-                  "pointer-events-auto modal max-w-screen-xs w-full mx-auto top-20 relative rounded-sm "
+                  "pointer-events-auto modal w-full limit-height mx-auto top-20 relative rounded-sm " +
+                    (e[0] == "about" || e[0] == "Filter"
+                      ? "max-w-screen-sm"
+                      : "max-w-screen-xs")
                 ),
             M(i, "role", "dialog"),
             M(i, "aria-modal", "true"),
@@ -5477,18 +5567,22 @@ var app = (function () {
     }
   }
 
+  function getOneGameOrArtistFromMusic(musicName) {
+    const splited = musicName.split(" - ");
+    return splited[splited.length - 1].trim();
+  }
+
   function getGameOrArtistFromMusicName(musicNameList) {
-    return musicNameList.map((a) => {
-      const splited = a.split("-");
-      return splited[splited.length - 1].trim();
-    });
+    return musicNameList
+      .map((a) => getOneGameOrArtistFromMusic(a))
+      .filter((m) => m.length > 0);
   }
 
   function MLt(t) {
     let n;
     const mapUrl = new Map();
-    musicListWithLinks.forEach((m) => mapUrl.set(m.answer, m.url));
-    const musicNameListFiltered = musicNameList.filter(
+    filteredMusicListWithLinks.forEach((m) => mapUrl.set(m.answer, m.url));
+    const musicNameListFiltered = filteredMusicNameList.filter(
       (s) => s != "" && mapUrl.has(s)
     );
     const artistOrGame = getGameOrArtistFromMusicName(musicNameListFiltered);
@@ -5532,6 +5626,134 @@ var app = (function () {
   class MLCt extends se {
     constructor(e) {
       super(), re(this, e, null, MLt, i, {});
+    }
+  }
+
+  function Filtert(t) {
+    let n;
+    let games = new Set();
+    getGameOrArtistFromMusicName(musicNameList).forEach((m) =>
+      games.add(m.trim())
+    );
+    let explaination = w("div");
+    explaination.innerHTML =
+      "Games you check will be selected. Don't forget to click Save after making your selection.";
+    let warning = w("div");
+    warning.innerHTML = "Warning: saving will reset your streak.";
+    let filteredGames = [...removeGames];
+    let grid = gridFilterGames(filteredGames, games);
+    let save = w("button");
+    save.innerHTML = "Save";
+    M(save, "style", "margin-left: auto;margin-right: auto;");
+    M(
+      save,
+      "class",
+      "px-2 py-2 uppercase tracking-widest border-none font-semibold text-sm bg-custom-positive"
+    );
+    save.addEventListener("click", function () {
+      saveFilteredGames(filteredGames);
+    });
+    let selectAll = w("button");
+    selectAll.innerHTML = "Select All";
+    M(
+      selectAll,
+      "style",
+      "margin-left: auto;margin-right: auto;margin-top: 15px;"
+    );
+    M(
+      selectAll,
+      "class",
+      "px-2 py-2 tracking-widest border-none font-semibold text-sm bg-custom-mg"
+    );
+    selectAll.addEventListener("click", function () {
+      removeGames = [];
+      filteredGames = [];
+      y(grid);
+      grid = gridFilterGames(filteredGames, games);
+      g(n, grid, save);
+    });
+    let unselectAll = w("button");
+    unselectAll.innerHTML = "Unselect All";
+    M(
+      unselectAll,
+      "style",
+      "margin-left: auto;margin-right: auto;margin-top: 15px;"
+    );
+    M(
+      unselectAll,
+      "class",
+      "px-2 py-2 tracking-widest border-none font-semibold text-sm bg-custom-mg"
+    );
+    unselectAll.addEventListener("click", function () {
+      removeGames = [...games].map((_, index) => index);
+      filteredGames = [...removeGames];
+      y(grid);
+      grid = gridFilterGames(filteredGames, games);
+      g(n, grid, save);
+    });
+    let cc = w("div");
+    M(cc, "class", "button-container");
+    p(cc, selectAll);
+    p(cc, unselectAll);
+    return {
+      c() {
+        (n = w("div")),
+          M(n, "style", "display: grid;justify-content: center;"),
+          M(n, "class", "text");
+      },
+      m(e, t) {
+        g(e, n, t),
+          p(n, explaination),
+          p(n, warning),
+          p(n, cc),
+          p(n, grid),
+          p(n, save);
+      },
+      p: e,
+      i: e,
+      o: e,
+      d(e) {
+        e && y(n);
+      },
+    };
+  }
+
+  function gridFilterGames(filteredGames, games) {
+    let grid = w("div");
+    M(grid, "class", "filter-form");
+    [...games].forEach((g, index) => {
+      let checkbox;
+      let checkboxInput;
+      let checkboxLabel;
+      (checkbox = w("div")),
+        (checkboxInput = w("input")),
+        (checkboxInput.id = g),
+        (checkboxInput.name = g),
+        (checkboxInput.checked = !filteredGames.includes(index)),
+        (checkboxInput.type = "checkbox"),
+        (checkboxLabel = w("label")),
+        (checkboxLabel.innerHTML = g),
+        p(checkbox, checkboxInput),
+        p(checkbox, checkboxLabel),
+        M(checkbox, "style", "display: flex;gap: 5px;"),
+        M(checkboxLabel, "style", "display:flex;align-items: center;"),
+        M(checkboxLabel, "for", g),
+        checkboxInput.addEventListener("click", function () {
+          const find = filteredGames.indexOf(index);
+          if (find != -1) {
+            filteredGames.splice(find, 1);
+          } else {
+            filteredGames.push(index);
+          }
+        }),
+        p(grid, checkbox);
+    });
+    return grid;
+  }
+
+  class FilterCt extends se {
+    constructor(e) {
+      super(), re(this, e, null, Filtert, i, {});
     }
   }
 
@@ -6452,14 +6674,23 @@ var app = (function () {
             (a = x()),
             (z = w("div")),
             (z.innerHTML =
-              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M 2.324219 3.484375 C 1.039062 3.484375 0 4.523438 0 5.804688 C 0 7.089844 1.039062 8.128906 2.324219 8.128906 C 3.605469 8.128906 4.644531 7.089844 4.644531 5.804688 C 4.644531 4.523438 3.605469 3.484375 2.324219 3.484375 Z M 2.324219 9.675781 C 1.039062 9.675781 0 10.71875 0 12 C 0 13.28125 1.039062 14.324219 2.324219 14.324219 C 3.605469 14.324219 4.644531 13.28125 4.644531 12 C 4.644531 10.71875 3.605469 9.675781 2.324219 9.675781 Z M 2.324219 15.871094 C 1.039062 15.871094 0 16.910156 0 18.195312 C 0 19.476562 1.039062 20.515625 2.324219 20.515625 C 3.605469 20.515625 4.644531 19.476562 4.644531 18.195312 C 4.644531 16.910156 3.605469 15.871094 2.324219 15.871094 Z M 7.742188 7.355469 L 22.453125 7.355469 C 23.308594 7.355469 24 6.660156 24 5.804688 C 24 4.949219 23.308594 4.257812 22.453125 4.257812 L 7.742188 4.257812 C 6.886719 4.257812 6.195312 4.949219 6.195312 5.804688 C 6.195312 6.660156 6.886719 7.355469 7.742188 7.355469 Z M 22.453125 10.453125 L 7.742188 10.453125 C 6.886719 10.453125 6.195312 11.144531 6.195312 12 C 6.195312 12.855469 6.886719 13.546875 7.742188 13.546875 L 22.453125 13.546875 C 23.308594 13.546875 24 12.855469 24 12 C 24 11.144531 23.308594 10.453125 22.453125 10.453125 Z M 22.453125 16.644531 L 7.742188 16.644531 C 6.886719 16.644531 6.195312 17.339844 6.195312 18.195312 C 6.195312 19.050781 6.886719 19.742188 7.742188 19.742188 L 22.453125 19.742188 C 23.308594 19.742188 24 19.050781 24 18.195312 C 24 17.339844 23.308594 16.644531 22.453125 16.644531 Z M 22.453125 16.644531 "></path></svg></div> \n        <div><p>You can use the top right button\n                to see the list of tracks</p></div>'),
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M 2 5 C 2 3.34375 3.34375 2 5 2 L 19 2 C 20.65625 2 22 3.34375 22 5 L 22 6.171875 C 22 6.96875 21.683594 7.730469 21.121094 8.292969 L 15.292969 14.121094 C 15.105469 14.308594 15 14.5625 15 14.828125 L 15 17.171875 C 15 17.96875 14.683594 18.730469 14.121094 19.292969 L 11.917969 21.496094 C 10.84375 22.570312 9 21.808594 9 20.285156 L 9 14.828125 C 9 14.5625 8.894531 14.308594 8.707031 14.121094 L 2.878906 8.292969 C 2.316406 7.730469 2 6.96875 2 6.171875 Z M 2 5 "></path></svg></div> \n        <div><p>' +
+              "Select the game you want to play with." +
+              "</p></div>"),
             (v = x()),
+            (zz = w("div")),
+            (zz.innerHTML =
+              '<div class="mr-4 w-8 text-custom-line"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M 2.324219 3.484375 C 1.039062 3.484375 0 4.523438 0 5.804688 C 0 7.089844 1.039062 8.128906 2.324219 8.128906 C 3.605469 8.128906 4.644531 7.089844 4.644531 5.804688 C 4.644531 4.523438 3.605469 3.484375 2.324219 3.484375 Z M 2.324219 9.675781 C 1.039062 9.675781 0 10.71875 0 12 C 0 13.28125 1.039062 14.324219 2.324219 14.324219 C 3.605469 14.324219 4.644531 13.28125 4.644531 12 C 4.644531 10.71875 3.605469 9.675781 2.324219 9.675781 Z M 2.324219 15.871094 C 1.039062 15.871094 0 16.910156 0 18.195312 C 0 19.476562 1.039062 20.515625 2.324219 20.515625 C 3.605469 20.515625 4.644531 19.476562 4.644531 18.195312 C 4.644531 16.910156 3.605469 15.871094 2.324219 15.871094 Z M 7.742188 7.355469 L 22.453125 7.355469 C 23.308594 7.355469 24 6.660156 24 5.804688 C 24 4.949219 23.308594 4.257812 22.453125 4.257812 L 7.742188 4.257812 C 6.886719 4.257812 6.195312 4.949219 6.195312 5.804688 C 6.195312 6.660156 6.886719 7.355469 7.742188 7.355469 Z M 22.453125 10.453125 L 7.742188 10.453125 C 6.886719 10.453125 6.195312 11.144531 6.195312 12 C 6.195312 12.855469 6.886719 13.546875 7.742188 13.546875 L 22.453125 13.546875 C 23.308594 13.546875 24 12.855469 24 12 C 24 11.144531 23.308594 10.453125 22.453125 10.453125 Z M 22.453125 16.644531 L 7.742188 16.644531 C 6.886719 16.644531 6.195312 17.339844 6.195312 18.195312 C 6.195312 19.050781 6.886719 19.742188 7.742188 19.742188 L 22.453125 19.742188 C 23.308594 19.742188 24 19.050781 24 18.195312 C 24 17.339844 23.308594 16.644531 22.453125 16.644531 Z M 22.453125 16.644531 "></path></svg></div> \n        <div><p>' +
+              "You can use the top right button to see the list of tracks." +
+              "</p></div>"),
+            (vv = x()),
             (l = w("div")),
             Q(u.$$.fragment),
             M(n, "class", "flex items-center mb-6"),
             M(s, "class", "flex items-center mb-6"),
             M(o, "class", "flex items-center mb-6"),
             M(z, "class", "flex items-center mb-6"),
+            M(zz, "class", "flex items-center mb-6"),
             M(l, "class", "justify-center flex py-2 mt-2");
         },
         m(e, d) {
@@ -6472,6 +6703,8 @@ var app = (function () {
             p(t, a),
             p(t, z),
             p(t, v),
+            p(t, zz),
+            p(t, vv),
             p(t, l),
             ee(u, l, null),
             (c = !0);
@@ -10965,9 +11198,34 @@ var app = (function () {
     );
   }
 
+  function Filtern(t) {
+    let n, r;
+    return (
+      (n = new FilterCt({})),
+      {
+        c() {
+          Q(n.$$.fragment);
+        },
+        m(e, t) {
+          ee(n, e, t), (r = !0);
+        },
+        p: e,
+        i(e) {
+          r || (Z(n.$$.fragment, e), (r = !0));
+        },
+        o(e) {
+          q(n.$$.fragment, e), (r = !1);
+        },
+        d(e) {
+          te(n, e);
+        },
+      }
+    );
+  }
+
   function Fn(e) {
     let t, n, r, s;
-    const i = [Rn, Wn, In, Hn, MLn],
+    const i = [Rn, Wn, In, Hn, MLn, Filtern],
       o = [];
 
     function a(e, t) {
@@ -10981,6 +11239,8 @@ var app = (function () {
         ? 3
         : "music-list" == e[10].name
         ? 4
+        : "filter" == e[10].name
+        ? 5
         : -1;
     }
     return (
@@ -11292,7 +11552,7 @@ var app = (function () {
 
   function jn(e, t, n) {
     let r, s, i, o;
-    u(e, Cn, (e) => n(26, (r = [...musicNameList]))),
+    u(e, Cn, (e) => n(26, (r = [...filteredMusicNameList]))),
       u(e, On, (e) => n(27, (s = e)));
     let a = currentIndex,
       l = {
@@ -11335,6 +11595,7 @@ var app = (function () {
     } else {
       if (firstLoad) {
         h = [];
+        filterMusicLists();
         firstLoad = false;
       } else {
         h = JSON.parse(localStorage.getItem("userStats"));

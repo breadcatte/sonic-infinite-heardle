@@ -1051,3 +1051,29 @@ a.svelte-1d3p4dy.svelte-1d3p4dy {
         transform: rotate(0) scale(1)
     }
 }
+
+.filter-form {
+	margin:10px 0;
+	column-count: 2;
+	font-size: 12px;
+}
+
+.button-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+	.filter-form {
+		column-count: 1;
+	}
+	
+	.text-3xl {
+		  font-size: 1rem;
+		  line-height: 1.25rem;
+	}
+
+	.button-container {
+		grid-template-columns: 1fr;
+	}
+}

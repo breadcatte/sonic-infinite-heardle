@@ -1,4 +1,4 @@
-version="V1.5"
+version="V2.0_(Filter_Feature)"
 
 filename="etrian-infinite-heardle_"$version
 
