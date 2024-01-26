@@ -3,7 +3,7 @@ var app = (function () {
   var twitter = "";
   var currentIndex = 0;
   var zipUrl =
-    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V1.3.zip?v=1682956533885"; // Set to '' if you don't wnat to allow download of the zip
+    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V3.0_(EMD2).zip"; // Set to '' if you don't wnat to allow download of the zip
   let removeGames = [];
   if (localStorage.getItem("removeGames")) {
     removeGames = JSON.parse(localStorage.getItem("removeGames"));
@@ -259,6 +259,30 @@ var app = (function () {
     "Battlefield: Roaming Ruler [Lowest Last Boss Battle] - Etrian Odyssey 5: Beyond the Myth",
     "Tumult: Crest of a Violent Wave (Arranged Ver.) [Secret Boss Battle] - Etrian Odyssey 5: Beyond the Myth",
     "Beyond the Myth [Ending 2] - Etrian Odyssey 5: Beyond the Myth",
+
+    //// Etrian Mystery Dungeon 2
+    // https://vgmdb.net/album/69916
+    "Those Who Heed the Call [Opening] - Etrian Mystery Dungeon 2",
+    "The Curtain Rises on a Legend [Title Screen] - Etrian Mystery Dungeon 2",
+    "Lakeside Town Oberfay [Town] - Etrian Mystery Dungeon 2",
+    "Halcyon Days [Boss Defeated] - Etrian Mystery Dungeon 2",
+    "Hot Spring Inn, Sunlit Forest [Inn] - Etrian Mystery Dungeon 2",
+    "Jungle Ruins [1st Labyrinth] - Etrian Mystery Dungeon 2",
+    "Emerald Grove [2nd Labyrinth] - Etrian Mystery Dungeon 2",
+    "Molten Caves [3rd Labyrinth] - Etrian Mystery Dungeon 2",
+    "Azure Rainforest [4th Labyrinth] - Etrian Mystery Dungeon 2",
+    "Abyssal Shrine [5th Labyrinth] - Etrian Mystery Dungeon 2",
+    "Frozen Grounds [6th Labyrinth] - Etrian Mystery Dungeon 2",
+    "Claret Hollows [7th Labyrinth] - Etrian Mystery Dungeon 2",
+    "Misty Ravine [8th Labyrinth] - Etrian Mystery Dungeon 2",
+    "Ancient Circuitry [9th Labyrinth: 1st Part] - Etrian Mystery Dungeon 2",
+    "Creeping Decay [9th Labyrinth: 2nd Part] - Etrian Mystery Dungeon 2",
+    "Infinite Foes [Boss Battle] - Etrian Mystery Dungeon 2",
+    "Illusory Showdown [Nadika Battle] - Etrian Mystery Dungeon 2",
+    "The Gods Afflicted [Last Boss Battle] - Etrian Mystery Dungeon 2",
+    "Bloodstained Sword [Lowest Last Boss Battle] - Etrian Mystery Dungeon 2",
+    "The Curtain Falls on the Adventure [Ending] - Etrian Mystery Dungeon 2",
+
     //// Etrian Odyssey Nexus
     // https://vgmdb.net/album/85264
     "To the Stage of a New Adventure [Opening] - Etrian Odyssey Nexus",
@@ -1442,6 +1466,92 @@ var app = (function () {
     {
       url: "https://soundcloud.com/beignet-v/end-of-the-long-myth",
       answer: "Beyond the Myth [Ending 2] - Etrian Odyssey 5: Beyond the Myth",
+    },
+    {
+      url: "https://soundcloud.com/emd2/those-who-heed-the-call-etrian",
+      answer: "Those Who Heed the Call [Opening] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/the-curtain-rises-on-a-legend",
+      answer:
+        "The Curtain Rises on a Legend [Title Screen] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/lakeside-town-oberfay-etrian",
+      answer: "Lakeside Town Oberfay [Town] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/halcyon-days-etrian-mystery",
+      answer: "Halcyon Days [Boss Defeated] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/hot-spring-inn-sunlit-forest",
+      answer: "Hot Spring Inn, Sunlit Forest [Inn] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/jungle-ruins-etrian-mystery",
+      answer: "Jungle Ruins [1st Labyrinth] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/emerald-grove-etrian-mystery",
+      answer: "Emerald Grove [2nd Labyrinth] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/molten-caves-etrian-mystery",
+      answer: "Molten Caves [3rd Labyrinth] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/azure-rainforest-etrian",
+      answer: "Azure Rainforest [4th Labyrinth] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/abyssal-shrine-etrian-mystery",
+      answer: "Abyssal Shrine [5th Labyrinth] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/frozen-grounds-etrian-mystery",
+      answer: "Frozen Grounds [6th Labyrinth] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/claret-hollows-etrian-mystery",
+      answer: "Claret Hollows [7th Labyrinth] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/misty-ravine-etrian-mystery",
+      answer: "Misty Ravine [8th Labyrinth] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/ancient-circuitry-etrian",
+      answer:
+        "Ancient Circuitry [9th Labyrinth: 1st Part] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/creeping-decay-etrian-mystery",
+      answer:
+        "Creeping Decay [9th Labyrinth: 2nd Part] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/infinite-foes-etrian-mystery",
+      answer: "Infinite Foes [Boss Battle] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/illusory-showdown-etrian",
+      answer: "Illusory Showdown [Nadika Battle] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/the-gods-afflicted-etrian",
+      answer:
+        "The Gods Afflicted [Last Boss Battle] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/bloodstained-sword-etrian",
+      answer:
+        "Bloodstained Sword [Lowest Last Boss Battle] - Etrian Mystery Dungeon 2",
+    },
+    {
+      url: "https://soundcloud.com/emd2/the-curtain-falls-on-the",
+      answer:
+        "The Curtain Falls on the Adventure [Ending] - Etrian Mystery Dungeon 2",
     },
     {
       url: "https://soundcloud.com/beignet0/to-the-stage-of-a-new-adventure",
@@ -5541,7 +5651,7 @@ var app = (function () {
             artist +
             '\'s musics. Based on <a href="https://joywave-heardle.glitch.me/" title="Joywave Heardle">Joywave Heardle</a>.</p> \n\n<p class="mb-3">Each music is randomly chosen from ' +
             artist +
-            '\'s soundtrack (except Etrian Mystery Dungeon 2).</p> \n\n\n\n <p class="mb-3">Want to make your own Heardle? Check out the <a href="https://glitch.com/edit/#!/etrian-infinite-heardle?path=README.md">README</a>' +
+            '\'s soundtrack.</p> \n\n\n\n <p class="mb-3">Want to make your own Heardle? Check out the <a href="https://glitch.com/edit/#!/etrian-infinite-heardle?path=README.md">README</a>' +
             (zipUrl
               ? '<p>You can download files to run the website locally <a href="' +
                 zipUrl +
