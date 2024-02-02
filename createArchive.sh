@@ -1,4 +1,4 @@
-version="V3.0_(EMD2)"
+version="V3.1_(Remove_silence)"
 
 filename="etrian-infinite-heardle_"$version
 
