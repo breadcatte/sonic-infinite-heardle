@@ -3,7 +3,7 @@ var app = (function () {
   var twitter = "";
   var currentIndex = 0;
   var zipUrl =
-    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V3.2.zip"; // Set to '' if you don't wnat to allow download of the zip
+    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V3.3.zip"; // Set to '' if you don't wnat to allow download of the zip
   let removeGames = [];
   if (localStorage.getItem("removeGames")) {
     removeGames = JSON.parse(localStorage.getItem("removeGames"));
@@ -41,7 +41,7 @@ var app = (function () {
     // https://vgmdb.net/album/6949
     "Now Begin Your Adventure! [Opening] - Etrian Odyssey 2: Heroes of Lagaard",
     "Cityscape: The Ones Engraved in Legends [Guild] - Etrian Odyssey 2: Heroes of Lagaard",
-    "Labyrinth I: Primitive Jungle [1st Stratum Dungeon 1F~5F] - Etrian Odyssey 2: Heroes of Lagaard",
+    "Labyrinth I: Ancient Forest [1st Stratum Dungeon 1F~5F] - Etrian Odyssey 2: Heroes of Lagaard",
     "Battlefield: First Battle [Normal Battle: 1st Part] - Etrian Odyssey 2: Heroes of Lagaard",
     "Cityscape: Land Spread Up North [Central City: Day] - Etrian Odyssey 2: Heroes of Lagaard",
     "Labyrinth II: Auburn Thicket [2nd Stratum Dungeon 6F~10F] - Etrian Odyssey 2: Heroes of Lagaard",
@@ -166,7 +166,7 @@ var app = (function () {
     // https://vgmdb.net/album/49255
     "Now Begin Your Adventure! [Opening] - Etrian Odyssey 2 Untold: The Fafnir Knight",
     "Cityscape: The Ones Engraved in Legends [Adventurer Guild] - Etrian Odyssey 2 Untold: The Fafnir Knight",
-    "Labyrinth I: Primitive Jungle [1st Stratum Dungeon 1F~5F] - Etrian Odyssey 2 Untold: The Fafnir Knight",
+    "Labyrinth I: Ancient Forest [1st Stratum Dungeon 1F~5F] - Etrian Odyssey 2 Untold: The Fafnir Knight",
     "Battlefield: The First Battle [Normal Battle: 1st Part] - Etrian Odyssey 2 Untold: The Fafnir Knight",
     "Cityscape: Land Spread Up North [Hi-Lagaard Plaza (Day)] - Etrian Odyssey 2 Untold: The Fafnir Knight",
     "Labyrinth II: Auburn Thicket [2nd Stratum Dungeon 6F~10F] - Etrian Odyssey 2 Untold: The Fafnir Knight",
@@ -450,7 +450,7 @@ var app = (function () {
     {
       url: "https://soundcloud.com/5038p00iul/labyrinth-i-primitive-jungle",
       answer:
-        "Labyrinth I: Primitive Jungle [1st Stratum Dungeon 1F~5F] - Etrian Odyssey 2: Heroes of Lagaard",
+        "Labyrinth I: Ancient Forest [1st Stratum Dungeon 1F~5F] - Etrian Odyssey 2: Heroes of Lagaard",
     },
     {
       url: "https://soundcloud.com/5038p00iul/battlefield-first-battle",
@@ -1035,7 +1035,7 @@ var app = (function () {
     {
       url: "https://soundcloud.com/eo2u/labyrinth-i-primitive-jungle",
       answer:
-        "Labyrinth I: Primitive Jungle [1st Stratum Dungeon 1F~5F] - Etrian Odyssey 2 Untold: The Fafnir Knight",
+        "Labyrinth I: Ancient Forest [1st Stratum Dungeon 1F~5F] - Etrian Odyssey 2 Untold: The Fafnir Knight",
     },
     {
       url: "https://soundcloud.com/eo2u/battlefield-the-first-battle",
