@@ -3,7 +3,7 @@ var app = (function () {
   var twitter = "";
   var currentIndex = 0;
   var zipUrl =
-    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V3.3.zip"; // Set to '' if you don't wnat to allow download of the zip
+    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V3.4.zip"; // Set to '' if you don't wnat to allow download of the zip
   let removeGames = [];
   if (localStorage.getItem("removeGames")) {
     removeGames = JSON.parse(localStorage.getItem("removeGames"));
@@ -278,7 +278,7 @@ var app = (function () {
     "Ancient Circuitry [9th Labyrinth: 1st Part] - Etrian Mystery Dungeon 2",
     "Creeping Decay [9th Labyrinth: 2nd Part] - Etrian Mystery Dungeon 2",
     "Infinite Foes [Boss Battle] - Etrian Mystery Dungeon 2",
-    "Illusory Showdown [Nadika Battle] - Etrian Mystery Dungeon 2",
+    "Illusory Showdown [Nadhica Battle] - Etrian Mystery Dungeon 2",
     "The Gods Afflicted [Last Boss Battle] - Etrian Mystery Dungeon 2",
     "Bloodstained Sword [Lowest Last Boss Battle] - Etrian Mystery Dungeon 2",
     "The Curtain Falls on the Adventure [Ending] - Etrian Mystery Dungeon 2",
@@ -1536,7 +1536,7 @@ var app = (function () {
     },
     {
       url: "https://soundcloud.com/emd2/illusory-showdown-etrian",
-      answer: "Illusory Showdown [Nadika Battle] - Etrian Mystery Dungeon 2",
+      answer: "Illusory Showdown [Nadhica Battle] - Etrian Mystery Dungeon 2",
     },
     {
       url: "https://soundcloud.com/emd2/the-gods-afflicted-etrian",
