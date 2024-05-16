@@ -3,17 +3,19 @@ var app = (function () {
   var twitter = "";
   var currentIndex = 0;
   var zipUrl =
-    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V4.0_(Tags).zip"; // Set to '' if you don't wnat to allow download of the zip
+    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V4.1.zip"; // Set to '' if you don't wnat to allow download of the zip
   let removeGames = [];
   if (localStorage.getItem("removeGames")) {
     removeGames = JSON.parse(localStorage.getItem("removeGames"));
   }
+  // Set to [] if you don't want to use the tag system
   const allTags = ["Battle", "City", "Dungeon", "Event"];
   let removeTags = [];
   if (localStorage.getItem("removeTags")) {
     removeTags = JSON.parse(localStorage.getItem("removeTags"));
   }
 
+  // You can remove the attributes "tags" if you set allTags to []
   var musicNameList = [
     //// Etrian Odyssey 1
     // https://vgmdb.net/album/4418
@@ -2608,9 +2610,14 @@ var app = (function () {
       localStorage.setItem("removeTags", "[]");
       removedTagsList = [];
     }
-    filteredMusicNameList = musicNameList
-      .filter((m) => !removedGameList.includes(getOneGameOrArtistFromMusic(m)))
-      .filter((m) => m.tags.some((t) => !removedTagsList.includes(t)));
+    filteredMusicNameList = musicNameList.filter(
+      (m) => !removedGameList.includes(getOneGameOrArtistFromMusic(m))
+    );
+    if (allTags.length > 0) {
+      filteredMusicNameList = filteredMusicNameList.filter((m) =>
+        m.tags.some((t) => !removedTagsList.includes(t))
+      );
+    }
     if (filteredMusicNameList.every((m) => m.id == -1)) {
       filteredMusicNameList = musicNameList;
       removeGames = [];
@@ -6654,9 +6661,9 @@ var app = (function () {
     getGameOrArtistFromMusicName(musicNameList).forEach((m) =>
       games.add(m.trim())
     );
-    let explaination = w("div");
-    explaination.innerHTML =
-      "Games and musics with the tag you check will be selected. Don't forget to click Save after making your selection.";
+    let explainationGames = w("div");
+    explainationGames.innerHTML =
+      "Games you check will be selected. Don't forget to click Save after making your selection.";
     let warning = w("div");
     warning.innerHTML = "Warning: saving will reset your streak.";
     let filteredGames = [...removeGames];
@@ -6691,11 +6698,13 @@ var app = (function () {
       removeGames = [];
       filteredGames = [];
       y(gridGames);
-      y(cc2);
+      y(explainationTags);
+      y(ccTags);
       y(gridTags);
       gridGames = gridFilterDiv(filteredGames, games);
       g(n, gridGames, save);
-      g(n, cc2, save);
+      g(n, explainationTags, save);
+      g(n, ccTags, save);
       g(n, gridTags, save);
     });
     let unselectAllGames = w("button");
@@ -6714,17 +6723,19 @@ var app = (function () {
       removeGames = [...games].map((_, index) => index);
       filteredGames = [...removeGames];
       y(gridGames);
-      y(cc2);
+      y(explainationTags);
+      y(ccTags);
       y(gridTags);
       gridGames = gridFilterDiv(filteredGames, games);
       g(n, gridGames, save);
-      g(n, cc2, save);
+      g(n, explainationTags, save);
+      g(n, ccTags, save);
       g(n, gridTags, save);
     });
-    let cc1 = w("div");
-    M(cc1, "class", "button-container");
-    p(cc1, selectAllGames);
-    p(cc1, unselectAllGames);
+    let ccGames = w("div");
+    M(ccGames, "class", "button-container");
+    p(ccGames, selectAllGames);
+    p(ccGames, unselectAllGames);
     let selectAllTags = w("button");
     selectAllTags.innerHTML = "Select All";
     M(
@@ -6763,10 +6774,17 @@ var app = (function () {
       gridTags = gridFilterDiv(filteredTags, allTags);
       g(n, gridTags, save);
     });
-    let cc2 = w("div");
-    M(cc2, "class", "button-container");
-    p(cc2, selectAllTags);
-    p(cc2, unselectAllTags);
+    let ccTags = w("span");
+    let explainationTags = w("span");
+    if (allTags.length > 0) {
+      ccTags = w("div");
+      M(ccTags, "class", "button-container");
+      p(ccTags, selectAllTags);
+      p(ccTags, unselectAllTags);
+      explainationTags = w("div");
+      explainationTags.innerHTML =
+        "You can select tags below to filter musics.";
+    }
     return {
       c() {
         (n = w("div")),
@@ -6775,11 +6793,12 @@ var app = (function () {
       },
       m(e, t) {
         g(e, n, t),
-          p(n, explaination),
+          p(n, explainationGames),
           p(n, warning),
-          p(n, cc1),
+          p(n, ccGames),
           p(n, gridGames),
-          p(n, cc2),
+          p(n, explainationTags),
+          p(n, ccTags),
           p(n, gridTags),
           p(n, save);
       },
