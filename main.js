@@ -3,7 +3,7 @@ var app = (function () {
   var twitter = "";
   var currentIndex = 0;
   var zipUrl =
-    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V4.1.zip"; // Set to '' if you don't wnat to allow download of the zip
+    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V4.2.zip"; // Set to '' if you don't wnat to allow download of the zip
   let removeGames = [];
   if (localStorage.getItem("removeGames")) {
     removeGames = JSON.parse(localStorage.getItem("removeGames"));
@@ -154,7 +154,7 @@ var app = (function () {
     },
     {
       id: 26,
-      name: "Cityscape: The Ones Engraved in Legends [Guild] - Etrian Odyssey 2: Heroes of Lagaard",
+      name: "Cityscape: The Ones Engraved in Legends [Explorers Guild] - Etrian Odyssey 2: Heroes of Lagaard",
       tags: ["City"],
     },
     {
@@ -277,7 +277,7 @@ var app = (function () {
     },
     {
       id: 50,
-      name: "Cityscape: Engrave Thy Name and Go Forth [Sea City Facility: Explorer's Guild] - Etrian Odyssey 3: The Drowned City",
+      name: "Cityscape: Engrave Thy Name and Go Forth [Sea City Facility: Explorers Guild] - Etrian Odyssey 3: The Drowned City",
       tags: ["City"],
     },
     {
@@ -420,7 +420,7 @@ var app = (function () {
     },
     {
       id: 78,
-      name: "Cityscape: Engraved Are Names That Echo to the Morrow [Explorer's Guild] - Etrian Odyssey 4: Legends of the Titan",
+      name: "Cityscape: Engraved Are Names That Echo to the Morrow [Explorers Guild] - Etrian Odyssey 4: Legends of the Titan",
       tags: ["City"],
     },
     {
