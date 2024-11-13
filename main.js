@@ -3,7 +3,7 @@ var app = (function () {
   var twitter = "";
   var currentIndex = 0;
   var zipUrl =
-    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V4.3.zip"; // Set to '' if you don't wnat to allow download of the zip
+    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V4.4.zip"; // Set to '' if you don't wnat to allow download of the zip
   let removeGames = [];
   if (localStorage.getItem("removeGames")) {
     removeGames = JSON.parse(localStorage.getItem("removeGames"));
@@ -1290,7 +1290,7 @@ var app = (function () {
     },
     {
       id: 249,
-      name: "Illusory Showdown [Nadhica Battle] - Etrian Mystery Dungeon 2",
+      name: "Illusory Showdown [Nadhica Boss Battle] - Etrian Mystery Dungeon 2",
       tags: ["Battle"],
     },
     {
