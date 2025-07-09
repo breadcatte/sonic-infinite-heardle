@@ -2,8 +2,7 @@ var app = (function () {
   var artist = "Etrian Odyssey";
   var twitter = "";
   var currentIndex = 0;
-  var zipUrl =
-    "https://cdn.glitch.global/6126f21e-b603-44a6-8895-8962a649fb4a/etrian-infinite-heardle_V4.5.zip"; // Set to '' if you don't wnat to allow download of the zip
+
   let removeGames = [];
   if (localStorage.getItem("removeGames")) {
     removeGames = JSON.parse(localStorage.getItem("removeGames"));
@@ -2555,12 +2554,6 @@ var app = (function () {
   let filteredMusicListWithLinks = [];
   filterMusicLists();
   var firstLoad = true;
-
-  fetch(zipUrl).then((r) => {
-    if (r.ok == false) {
-      zipUrl = "";
-    }
-  });
 
   const Cn = ue(filteredMusicNameList),
     On = {
@@ -6606,11 +6599,6 @@ var app = (function () {
             '\'s musics. Based on <a href="https://joywave-heardle.glitch.me/" title="Joywave Heardle">Joywave Heardle</a>.</p> \n\n<p class="mb-3">Each music is randomly chosen from ' +
             artist +
             '\'s soundtrack.</p> \n\n\n\n <p class="mb-3">Want to make your own Heardle? Check out the <a href="https://glitch.com/edit/#!/etrian-infinite-heardle?path=README.md">README</a>' +
-            (zipUrl
-              ? '<p>You can download files to run the website locally <a href="' +
-                zipUrl +
-                '">here</a></p>'
-              : "") +
             '</p>  \n\n\n\n <p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>. <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. '),
           M(n, "class", "text");
       },
