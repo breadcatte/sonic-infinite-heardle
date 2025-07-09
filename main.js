@@ -1,6 +1,5 @@
 var app = (function () {
   var artist = "Etrian Odyssey";
-  var twitter = "";
   var currentIndex = 0;
 
   let removeGames = [];
@@ -6598,8 +6597,8 @@ var app = (function () {
             artist +
             '\'s musics. Based on <a href="https://joywave-heardle.glitch.me/" title="Joywave Heardle">Joywave Heardle</a>.</p> \n\n<p class="mb-3">Each music is randomly chosen from ' +
             artist +
-            '\'s soundtrack.</p> \n\n\n\n <p class="mb-3">Want to make your own Heardle? Check out the <a href="https://glitch.com/edit/#!/etrian-infinite-heardle?path=README.md">README</a>' +
-            '</p>  \n\n\n\n <p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>. <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. '),
+            '\'s soundtrack.</p> \n\n\n\n <p class="mb-3">Want to make your own Heardle? Check out the <a href="https://github.com/nterrien/etrian-infinite-heardle">README</a>' +
+            '</p>  \n\n\n\n <p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://github.com/">Github</a>. <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. '),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -7071,7 +7070,7 @@ var app = (function () {
           (n = w("p")),
             (s = w("p")),
             (n.innerHTML =
-              'Have questions/run into bugs? DM Beignet0 on Reddit, beignetSan on Twitch, @beignet0.bsky.social on Bluesky or beignet1139 on Discord!<br><br>You can also play <a href="https://etrian-heardle.glitch.me/" title="Etrian Odyssey Heardle">Etrian Odyssey Heardle</a> daily.'),
+              'Have questions/run into bugs? DM Beignet0 on Reddit, beignetSan on Twitch, @beignet0.bsky.social on Bluesky, beignet1139 on Discord or create an issue in <a href="https://github.com/nterrien/etrian-infinite-heardle/issues">Github</a>!<br><br>You can also play <a href="https://nterrien.github.io/etrian-heardle/" title="Etrian Odyssey Heardle">Etrian Odyssey Heardle</a> daily.'),
             (r = x()),
             (s = w("p")),
             (i = x()),
@@ -7686,7 +7685,7 @@ var app = (function () {
             "\n\n" +
             t +
             "\n\n";
-          // + "https://etrian-infinite-heardle.glitch.me/"
+          // + "https://nterrien.github.io/etrian-infinite-heardle/"
           if (
             !navigator.share ||
             !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -8717,7 +8716,7 @@ var app = (function () {
             "content",
             "Guess the " +
               artist +
-              " song from the intro in as few tries as possible"
+              " music from the intro in as few tries as possible"
           ),
           M(o, "rel", "manifest"),
           M(o, "href", "/site.webmanifest"),
