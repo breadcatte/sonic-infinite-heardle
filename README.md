@@ -7,7 +7,12 @@ Each music is randomly chosen from Etrian Odyssey's soundtrack.
 code edited from: [WJSN Heardle](https://github.com/haseul/wjsn-heardle)
 <br />
 <br />
+HOW TO RUN INFINITE HEARDLE LOCALLY:
+Open **index.html** with your browser (Firefox, Chromium)
+<br />
+<br />
 HOW TO MAKE YOUR OWN INFINITE HEARDLE (UDPATED on **25/07/09**)
+(If you want an infinite heardle that includes translations you can check the readme of [Pokémon Infinite Heardle](https://github.com/nterrien/pkmn-infinite-heardle))
 
 1. **Fork this project** to create your own copy of the code
 2. **Rename the project** with the URL that you'd like to Heardle to live at, by going to **Settings >  Repository name**
@@ -30,8 +35,6 @@ HOW TO MAKE YOUR OWN INFINITE HEARDLE (UDPATED on **25/07/09**)
 12. If you want to edit the text in the **heart button** next to the info button, around **line 7073** you can update the text that shows up there. Search for **"Have questions..."** to find the line easier.
 
 **KNOWN ISSUES**
-
-- Sometimes when you share your link to twitter, the image you added doesnt show up, even if you've updated the image link. I think its a twitter issue and not a code issue.
 
 - This code is specific to Soundcloud links.
 
