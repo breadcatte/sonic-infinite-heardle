@@ -4,7 +4,7 @@ A clone of [Heardle](https://www.heardle.app/), and [K-Pop Heardle](https://hear
 
 Each music is randomly chosen from Etrian Odyssey's soundtrack.
 
-code edited from: [WJSN Heardle](https://github.com/haseul/wjsn-heardle)
+code edited from: [WJSN Heardle](https://github.com/jeroldcamacho/wjsn-heardle)
 <br />
 <br />
 HOW TO RUN INFINITE HEARDLE LOCALLY:
