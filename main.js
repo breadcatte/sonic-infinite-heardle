@@ -27,7 +27,7 @@ var app = (function () {
       "Lava Powerhouse - Sonic Spinball (16-bit)",
       "Windmill Isle (Day) - Sonic Unleashed",
       "Green Grove Zone Act 1 - Sonic 3D Blast (16-bit)",
-	    "History - Sonic Mega Collection",
+	  "History - Sonic Mega Collection",
       "Green Hill Zone - Sonic the Hedgehog (16-bit)",
       "Chao Kindergarten - Sonic Adventure 2",
       "Whisker & Johnny (boss) - Sonic Rush Adventure",
@@ -855,6 +855,7 @@ var app = (function () {
 		"Game Land 5 (Aquarium Park) - Sonic Colors (Wii)",
 		"Character Select - Sonic 06",
     "Infinite - Sonic Forces",
+    },
   ];
   let filteredMusicNameList = [];
 
