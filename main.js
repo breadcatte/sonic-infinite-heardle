@@ -1211,6 +1211,15 @@ var musicNameList = [
 	"Seaside Beach Act 2 - Sonic Boom: Shattered Crystal",
 	"Perfect Chaos Revival! ...Boss: Perfect Chaos - Sonic Adventure",
 	"Battle Mode: Menu - Sonic Superstars",
+	"Caron Forest - Tails Adventure",
+	"Egg Fortress Zone Act 1 - Sonic Superstars",
+	"Endless Mine - Sonic 3 & Knuckles",
+	"Sleeping Egg Zone - Sonic Chaos",
+	"Shamar (Night) - Sonic Unleashed",
+	"Asteroid Coaster Act 3 (Remix) - Sonic Colors: Ultimate",
+	"Special Stage (3D) - Sonic Triple Trouble",
+	"Launch Base Zone Act 1 - Sonic Origins",
+	"It Has Come to This (Erazor Djinn; Night Palace boss) - Sonic and the Secret Rings",
 	
   ];
 
@@ -6037,6 +6046,42 @@ var musicListWithLinks = [
 		url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-battle-mode-menu",
 		answer: "Battle Mode: Menu - Sonic Superstars",
 		},
+		 {
+			url: "https://soundcloud.com/faded_boo/caron-forest",
+		    answer: "Caron Forest - Tails Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-egg-fortress-act-1",
+		    answer: "Egg Fortress Zone Act 1 - Sonic Superstars",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/endless-mine",
+		    answer: "Endless Mine - Sonic 3 & Knuckles",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sleeping-egg-zone",
+		    answer: "Sleeping Egg Zone - Sonic Chaos",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/shamar-night",
+		    answer: "Shamar (Night) - Sonic Unleashed",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/asteroid-coaster-act-3-remix",
+		    answer: "Asteroid Coaster Act 3 (Remix) - Sonic Colors: Ultimate",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/special-stage-2-2",
+		    answer: "Special Stage (3D) - Sonic Triple Trouble",
+		 },
+		 {
+			url: "https://soundcloud.com/nathan-202274230/launch-base-zone-act-1-sonic",
+		    answer: "Launch Base Zone Act 1 - Sonic Origins",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/erazor-djinn",
+		    answer: "It Has Come to This (Erazor Djinn; Night Palace boss) - Sonic and the Secret Rings",
+		 },
   ];
   shuffleMusic();
   var firstLoad = true;
@@ -10212,7 +10257,7 @@ var musicListWithLinks = [
           (n = w("p")),
             (s = w("p")),
             (n.innerHTML =
-              '<a href="https://www.twitch.tv/velvetcoach">Check out my wife VelvetCoach on twitch.tv</a>, who inspired me to revive this infinite heardle, and is my inspiration for so many other things in life.<br><br>Also, for a new Heardle every day, check out the updated <a href="https://sonic-heardle.netlify.app/" title="">Sonic Heardle Vol3&K</a>, the tracklist of which I will try to add over time here. (Up to date as of 29-07-2025)'),
+              '<a href="https://www.twitch.tv/velvetcoach">Check out my wife VelvetCoach on twitch.tv</a>, who inspired me to revive this infinite heardle, and is my inspiration for so many other things in life.<br><br>Also, for a new Heardle every day, check out the updated <a href="https://sonic-heardle.netlify.app/" title="">Sonic Heardle Vol3&K</a>, the tracklist of which I will try to add over time here. (Up to date as of 30-07-2025)'),
             (r = x()),
             (s = w("p")),
             (i = x()),
