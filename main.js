@@ -5793,14 +5793,6 @@ var musicListWithLinks = [
 		url: "https://soundcloud.com/empire-city-music-hall/cyber-space-results-screen-complete-no-pause-at-start",
 		answer: "Cyber Space: Results Screen (Complete) - Sonic Frontiers",
 		},
-	  	{
-		url: "https://soundcloud.com/user-304781955/sonic-forces-ost-spaceport",
-		answer: "Fighting Onward (Space Port) - Sonic Forces",
-		},
-		{
-		url: "https://soundcloud.com/empire-city-music-hall/cyber-space-results-screen-complete-no-pause-at-start",
-		answer: "Cyber Space: Results Screen (Complete) - Sonic Frontiers",
-		},
 		{
 		url: "https://soundcloud.com/faded_boo/emerl-configuration",
 		answer: "Emerl Configuration - Sonic Battle",
