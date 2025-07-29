@@ -1150,8 +1150,6 @@ var musicNameList = [
 	"Casino Street Zone Act 3 - Sonic 4: Episode 1",
 	"Fighting Onward (Space Port) - Sonic Forces",
 	"Cyber Space: Results Screen (Complete) - Sonic Frontiers",
-	"Fighting Onward (Space Port) - Sonic Forces",
-	"Cyber Space: Results Screen (Complete) - Sonic Frontiers",
 	"Emerl Configuration - Sonic Battle",
 	"Game Land 7 (Terminal Velocity) - Sonic Colors (Wii)",
 	"Stage Clear - Sonic Adventure 2",
