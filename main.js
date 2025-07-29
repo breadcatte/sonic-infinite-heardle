@@ -846,6 +846,69 @@ var app = (function () {
 		"Game Land 5 (Aquarium Park) - Sonic Colors (Wii)",
 		"Character Select - Sonic 06",
     "Infinite - Sonic Forces",
+	  		"Fighting Onward (Space Port) - Sonic Forces",
+		"Cyber Space: Results Screen (Complete) - Sonic Frontiers",
+		"Emerl Configuration - Sonic Battle",
+        "Game Land 7 (Terminal Velocity) - Sonic Colors (Wii)",
+        "Stage Clear - Sonic Adventure 2",
+        "Jingle: Chaos Control - Shadow the Hedgehog",
+        "Super Sonic Racing (for Casino Park) - Sonic & Sega All-Stars Racing (DS)",
+        "Honeycomb Highway (Desert Ruins Zone 2) - Sonic Lost World",
+        "Hikaru Michi ('The Shining Road,' Japanese ending 2) - Sonic X",
+        "Great Turquoise Zone - Sonic Triple Trouble",
+		"Bright Sound ...for Dry Lagoon - Sonic Adventure 2",
+        "vs. Orcan & Skullian (Remix) - Sonic Colors: Ultimate",
+		"Ocean Palace - Sonic Heroes",
+        "Neon Palace Zone Act 2 - Sonic Rivals 2",
+        "Game Land Menu (Eggman's theme) - Sonic Colors (DS)",
+		"Gigalopolis Zone - Sonic Chaos (Game Gear)",
+		"Fight for My Own Way ...Boss: Event - Sonic Adventure",
+		"Big Swell (Allegro) - Sonic Rush Adventure",
+		"Star Light - Sonic Drift",
+		"Cutscene: The Tornado Takes Off! (pre-Sky Fortress) - Sonic 4: Episode 2",
+		"Live Life (credits) - Sonic and the Black Knight",
+		"Aquarium Park Act 1 (Remix) - Sonic Colors: Ultimate",
+		"Cyber Space 2-2: Heavenly Sky - Sonic Frontiers",
+		"Steel Cortex (Titanic Monarch Zone Act 2) - Sonic Mania",
+		"Boss - Sonic Blast",
+		"Unknown from M.E. ...Theme of Knuckles - Sonic Adventure 2",
+		"Dreams Dreams (NiGHTS into Dreams remix) - Sonic Pinball Party", 
+		"Ice Cap Zone Act 1 - Sonic Origins",
+		"Un-gravitify (Crush 40 version) - Sonic Riders: Zero Gravity (album remix)",
+		"On the Edge ...for Eternal Engine - Sonic Adventure 2",
+		"Wrapped in Black: Part 2 (final boss, pinch) - Sonic Rush",
+		"Frozen Base Zone Act 1 - Sonic Superstars",
+		"Free (main theme) - Sonic Free Riders",
+		"Event: Strategy (Dark Story cutscene) - Sonic Adventure 2",
+		"Gate: Radical Highway (White Space) - Shadow Generations",
+		"vs. Dark Gaia (phase 1) - Sonic Unleashed",
+		"The Doomsday Zone - Sonic 3 & Knuckles",
+		"I'm Here: Revisited (final boss) - Sonic Frontiers: Another Story",
+		"Event: Finale... Adventure Must Go On (ending cutscene) - Sonic Heroes",
+		"You're My Number One (credits) - Sonic R",
+		"Live & Learn (Live) - Sonic 30th Anniversary Symphony (Live)",
+		"Title (Sonic 1 remix) - Sonic Generations (consoles/PC)",
+		"Menu - Sonic Gems Collection",
+		"Blue Coast Zone Act 1 (Race to Win remix) - Sonic Rivals 2",
+		"This is Our World: Phase 1 (world map, early game) - Sonic Forces",
+		"Angel Island Zone Act 1 - Sonic Advance",
+		"Dragon Road (Day) - Sonic Unleashed",
+		"The Machine - Sonic Spinball (8-bit)",
+		"Spring Stadium Zone Act 2 - Sonic 3D Blast (32-bit)",
+		"Chemical Plant Zone Act 2 - Sonic Mania",
+		"Stardust Speedway (Bad Future) - Sonic CD (US)",
+		"Ouranos Island (Remix) - Sonic Frontiers: Another Story",
+		"Sweet Mountain Mission - Sonic Colors (DS)",
+		"Tornado ...for Windy Valley - Sonic Adventure",
+		"Dining Car 1 - The Murder of Sonic the Hedgehog",
+		"Credits - Sonic Mega Collection",
+		"Game Land 6 (Asteroid Coaster) - Sonic Colors (Wii)",
+		"Titan: WYVERN - Sonic Frontiers",
+		"Invincibility (Sonic & Knuckles remix) - Sonic Pocket Adventure",
+		"Hydrocity Zone Act 2 - Sonic Mania",
+		"Seaside Beach Act 2 - Sonic Boom: Shattered Crystal",
+		"Perfect Chaos Revival! ...Boss: Perfect Chaos - Sonic Adventure",
+		"Battle Mode: Menu - Sonic Superstars",
   ];
   // Bug : Sometimes musics stops appearing in suggestions, it seems that musics dissapears at the end of the array
   // Adding empty string makes them unfindable and prevent this bug
@@ -4214,6 +4277,258 @@ var app = (function () {
       url: "https://soundcloud.com/quentthequent/sonic-forces-full-infinite-theme-high-quality",
         answer: "Infinite - Sonic Forces",
      },
+	  		 {
+			url: "https://soundcloud.com/user-304781955/sonic-forces-ost-spaceport",
+		    answer: "Fighting Onward (Space Port) - Sonic Forces",
+		 },
+		 {
+			url: "https://soundcloud.com/empire-city-music-hall/cyber-space-results-screen-complete-no-pause-at-start",
+		    answer: "Cyber Space: Results Screen (Complete) - Sonic Frontiers",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/emerl-configuration",
+		    answer: "Emerl Configuration - Sonic Battle",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/game-land-7",
+		    answer: "Game Land 7 (Terminal Velocity) - Sonic Colors (Wii)",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/round-clear-1",
+		    answer: "Stage Clear - Sonic Adventure 2",
+		 },
+{
+			url: "https://soundcloud.com/live-from-null-space/jingle-chaos-control-no-pause-at-start",
+		    answer: "Jingle: Chaos Control - Shadow the Hedgehog",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/casino-park-super-sonic-racing",
+		    answer: "Super Sonic Racing (for Casino Park) - Sonic & Sega All-Stars Racing (DS)",
+		 },
+{
+      url: "https://soundcloud.com/faded_boo/honeycomb-highway",
+        answer: "Honeycomb Highway (Desert Ruins Zone 2) - Sonic Lost World",
+      },
+{
+			url: "https://soundcloud.com/live-from-null-space/hikaru-michi-the-shining-road-no-pause-at-start",
+		    answer: "Hikaru Michi ('The Shining Road,' Japanese ending 2) - Sonic X",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/great-turquoise-zone",
+		    answer: "Great Turquoise Zone - Sonic Triple Trouble",
+		 },
+{
+			url: "https://soundcloud.com/live-from-null-space/bright-sound-for-dry-lagoon-no-pause-at-start",
+		    answer: "Bright Sound ...for Dry Lagoon - Sonic Adventure 2",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/orcan-skullian-remix",
+		    answer: "vs. Orcan & Skullian (Remix) - Sonic Colors: Ultimate",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/ocean-palace",
+		    answer: "Ocean Palace - Sonic Heroes",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/neon-palace-zone-act-2",
+		    answer: "Neon Palace Zone Act 2 - Sonic Rivals 2",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/game-land-title-screen-ds-ver",
+		    answer:  "Game Land Menu (Eggman's theme) - Sonic Colors (DS)",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/09-gigapolis-zone",
+		    answer: "Gigalopolis Zone - Sonic Chaos (Game Gear)",
+		 },
+{
+			url: "https://soundcloud.com/live-from-null-space/fight-for-my-own-way-no-pause-at-start",
+		    answer: "Fight for My Own Way ...Boss: Event - Sonic Adventure",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/big-swell-allegro",
+		    answer: "Big Swell (Allegro) - Sonic Rush Adventure",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/starlight",
+		    answer: "Star Light - Sonic Drift",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/event-the-tornado-takes-off",
+		    answer: "Cutscene: The Tornado Takes Off! (pre-Sky Fortress) - Sonic 4: Episode 2",
+		 },
+{
+			url: "https://soundcloud.com/ondreas-williams/live-life-ending-theme-of-sonic-and-the-black-knight",
+		    answer: "Live Life (credits) - Sonic and the Black Knight",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/aquarium-park-act-7",
+		    answer: "Aquarium Park Act 1 (Remix) - Sonic Colors: Ultimate",
+		 },
+{
+			url: "https://soundcloud.com/live-from-null-space/cyber-space-2-2-heavenly-sky-no-pause-at-start",
+		    answer: "Cyber Space 2-2: Heavenly Sky - Sonic Frontiers",
+		 },
+{
+			url: "https://soundcloud.com/sonic989/steel-cortex-titanic-monarch-zone-act-2",
+		    answer: "Steel Cortex (Titanic Monarch Zone Act 2) - Sonic Mania",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/boss-theme-2",
+		    answer: "Boss - Sonic Blast",
+		 },
+{
+			url: "https://soundcloud.com/jonathan-lara-veliz-889662618/unknown-from-m-e-theme-of",
+		    answer: "Unknown from M.E. ...Theme of Knuckles - Sonic Adventure 2",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/dreams-dreams",
+		    answer: "Dreams Dreams (NiGHTS into Dreams remix) - Sonic Pinball Party",
+		 },
+{
+			url: "https://soundcloud.com/nathan-202274230/ice-cap-zone-act-1-sonic",
+		    answer: "Ice Cap Zone Act 1 - Sonic Origins",
+		 },
+{
+			url: "https://soundcloud.com/live-from-null-space/un-gravitify-crush-40-no-pause-at-start",
+		    answer: "Un-gravitify (Crush 40 version) - Sonic Riders: Zero Gravity (album remix)",
+		 },
+{
+			url: "https://soundcloud.com/live-from-null-space/on-the-edge-for-eternal-engine-no-pause-at-start",
+		    answer: "On the Edge ...for Eternal Engine - Sonic Adventure 2",
+		 },
+{
+			url: "https://soundcloud.com/fawfulhasfury/34-wrapped-in-black-part-2",
+		    answer: "Wrapped in Black: Part 2 (final boss, pinch) - Sonic Rush",
+		 },
+{
+			url: "https://soundcloud.com/neibarg-mylers/frozen-base-zone-act-1-sonic-superstars-ost",
+		    answer: "Frozen Base Zone Act 1 - Sonic Superstars",
+		 },
+{
+			url: "https://soundcloud.com/live-from-null-space/free-no-pause-at-start",
+		    answer: "Free (main theme) - Sonic Free Riders",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/event-strategy-dark-story-ver",
+		    answer: "Event: Strategy (Dark Story cutscene) - Sonic Adventure 2",
+		 },
+{
+			url: "https://soundcloud.com/james-smith-555071498/radical-highway-white-space",
+		    answer: "Gate: Radical Highway (White Space) - Shadow Generations",
+		 },
+{
+			url: "https://soundcloud.com/live-from-null-space/vs-dark-gaia-no-pause-at-start",
+		    answer: "vs. Dark Gaia (phase 1) - Sonic Unleashed"
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/doomsday-zone",
+		    answer: "The Doomsday Zone - Sonic 3 & Knuckles",
+		 },
+{
+			url: "https://soundcloud.com/user-79732114/im-here-revisited-sonic",
+		    answer: "I'm Here: Revisited (final boss) - Sonic Frontiers: Another Story",
+		 },
+{
+			url: "https://soundcloud.com/faded_boo/event-finaleadventure-must-go-on",
+		    answer: "Event: Finale... Adventure Must Go On (ending cutscene) - Sonic Heroes",
+		 },
+    {
+			url: "https://soundcloud.com/faded_boo/credits-youre-my-number-one",
+		    answer: "You're My Number One (credits) - Sonic R",
+		 },
+    {
+			url: "https://soundcloud.com/faded_boo/live-learn-30th-anniversary-ver",
+		    answer: "Live & Learn (Live) - Sonic 30th Anniversary Symphony (Live)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/title-screen-1",
+		    answer: "Title (Sonic 1 remix) - Sonic Generations (consoles/PC)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/menu-1",
+		    answer: "Menu - Sonic Gems Collection",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/race-to-win-1",
+		    answer: "Blue Coast Zone Act 1 (Race to Win remix) - Sonic Rivals 2",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/this-is-our-world-phase-1-no-pause-at-start",
+		    answer: "This is Our World: Phase 1 (world map, early game) - Sonic Forces",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sonic-advance-music-angel-1",
+		    answer: "Angel Island Zone Act 1 - Sonic Advance",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/dragon-road-day-no-pause-at-start",
+		    answer: "Dragon Road (Day) - Sonic Unleashed",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/the-machine-1",
+		    answer: "The Machine - Sonic Spinball (8-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/spring-stadium-zone-act-3",
+		    answer: "Spring Stadium Zone Act 2 - Sonic 3D Blast (32-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/sonic-mania-456108433/sonic-mania-chemical-plant-1",
+		    answer: "Chemical Plant Zone Act 2 - Sonic Mania",
+		 },
+		 {
+			url: "https://soundcloud.com/sonic-cd-us/sonic-cd-us-stardust-2",
+		    answer: "Stardust Speedway (Bad Future) - Sonic CD (US)",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/ouranos-island-remix-no-pause-at-start",
+		    answer: "Ouranos Island (Remix) - Sonic Frontiers: Another Story",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sweet-mountain-act-5",
+		    answer: "Sweet Mountain Mission - Sonic Colors (DS)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/windy-valley-tornado",
+		    answer: "Tornado ...for Windy Valley - Sonic Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/rando-kite/the-murder-of-sonic-the-7",
+		    answer: "Dining Car 1 - The Murder of Sonic the Hedgehog",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/ending-13",
+		    answer: "Credits - Sonic Mega Collection",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/game-land-6",
+		    answer: "Game Land 6 (Asteroid Coaster) - Sonic Colors (Wii)",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/titan-wyvern-no-pause-at-start",
+		    answer: "Titan: WYVERN - Sonic Frontiers",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/invincibility-5",
+		    answer: "Invincibility (Sonic & Knuckles remix) - Sonic Pocket Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/sonic-mania-456108433/sonic-mania-hydrocity-zone-1",
+		    answer: "Hydrocity Zone Act 2 - Sonic Mania",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/seaside-beach-act-2",
+		    answer: "Seaside Beach Act 2 - Sonic Boom: Shattered Crystal",
+		 },
+		 {
+			url: "https://soundcloud.com/user-427276937-751822898/64-perfect-chaos-revival-boss",
+		    answer: "Perfect Chaos Revival! ...Boss: Perfect Chaos - Sonic Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-battle-mode-menu",
+		    answer: "Battle Mode: Menu - Sonic Superstars",
+		 },
   ];
   shuffleMusic();
   var firstLoad = true;
@@ -8110,7 +8425,7 @@ var app = (function () {
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<p class="mb-3">This is a clone of <a href="https://etrian-infinite-heardle.glitch.me">Etrian Odyssey Infinite Heardle</a> (which itself was based on <a href="https://joywave-heardle.glitch.me">Joywave Heardle</a>, which in turn was modeled on <a href="https://www.heardle.app" title="Heardle">Heardle</a> and <a href="https://heardle-kpop.glitch.me" title="Heardle">K-Pop Heardle</a>). As the name suggests, it focuses on music from the <i>Sonic the Hedgehog</i> series and can also be played forever, with no daily limit.</p> \n\n<p class="mb-3">Every song from volumes 1 and 2 of the original <a href="https://sonic-heardle.glitch.me">Sonic Heardle</a> is in the database. (Exactly one new song has been added: "Infinite" from <i>Sonic Forces</i>.) Most of them are from the games, with a few from adaptations (like the OVA or <i>SatAM</i>) thrown in as well.</p> \n\n\n\n <p class="mb-3"> For help making your own infinite Heardle, check out <a href="https://github.com/nterrien/etrian-infinite-heardle">the README</a>.</p> \n\n\n\n <p class="mb-3">Sonic Heardle originally created by <a href="https://twitter.com/laughandpeace11">@LaughAndPeace11</a>.</p>  \n\n\n\n <p class="mb-3"><a href="https://www.twitch.tv/velvetcoach">Check out VelvetCoach on twitch.tv</a>!</p> \n\n\n\n <p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>. <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. '),
+            '<p class="mb-3">This is a clone of <a href="https://etrian-infinite-heardle.glitch.me">Etrian Odyssey Infinite Heardle</a> (which itself was based on <a href="https://joywave-heardle.glitch.me">Joywave Heardle</a>, which in turn was modeled on <a href="https://www.heardle.app" title="Heardle">Heardle</a> and <a href="https://heardle-kpop.glitch.me" title="Heardle">K-Pop Heardle</a>). As the name suggests, it focuses on music from the <i>Sonic the Hedgehog</i> series and can also be played forever, with no daily limit.</p> \n\n<p class="mb-3">Every song from volumes 1 and 2 of the original <a href="https://sonic-heardle.glitch.me">Sonic Heardle</a> is in the database, and I will gradually be adding the songlist of volume 3&K as I find the time. Most of them are from the games, with a few from adaptations (like the OVA or <i>SatAM</i>) thrown in as well.</p> \n\n\n\n <p class="mb-3"> For help making your own infinite Heardle, check out <a href="https://github.com/nterrien/etrian-infinite-heardle">the README</a>.</p> \n\n\n\n <p class="mb-3">Sonic Heardle originally created by <a href="https://twitter.com/laughandpeace11">@LaughAndPeace11</a>.</p>  \n\n\n\n <p class="mb-3"><a href="https://www.twitch.tv/velvetcoach">Check out VelvetCoach on twitch.tv</a>!</p> \n\n\n\n <p class="text-xs mb-3 text-custom-line">Prepared with <a href="https://developers.soundcloud.com">Soundcloud</a>,\n    <a href="https://svelte.dev">Svelte</a>,\n    <a href="https://tailwindcss.com">Tailwind</a>,\n    <a href="https://fonts.google.com/noto/specimen/Noto+Serif+Display">Noto Serif Display</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans">Noto Sans</a>,\n    <a href="https://iconsvg.xyz">IconSVG</a>, <a href="https://momentjs.com">momentjs</a>,\n    <a href="https://tarekraafat.github.io/autoComplete.js/#/">autocomplete.js</a>, and powered by <a href="https://glitch.com/">Glitch</a>. <a href="https://omakase.studio" title="Studio Omakase">Served omakase / お任せ</a>. '),
           M(n, "class", "text");
       },
       m(e, t) {
@@ -8389,7 +8704,7 @@ var app = (function () {
           (n = w("p")),
             (s = w("p")),
             (n.innerHTML =
-              '<a href="https://www.twitch.tv/velvetcoach">Check out my wife VelvetCoach on twitch.tv</a>, who inspired me to revive this infinite heardle, and is my inspiration for so many other things in life.<br><br>Also, for a new Heardle every day, check out the updated <a href="https://sonic-heardle.netlify.app/" title="">Sonic Heardle Vol3&K</a>, the tracklist of which I will eventually try to add here.'),
+              '<a href="https://www.twitch.tv/velvetcoach">Check out my wife VelvetCoach on twitch.tv</a>, who inspired me to revive this infinite heardle, and is my inspiration for so many other things in life.<br><br>Also, for a new Heardle every day, check out the updated <a href="https://sonic-heardle.netlify.app/" title="">Sonic Heardle Vol3&K</a>, the tracklist of which I will try to add over time here. (Up to date as of 29-07-2025)'),
             (r = x()),
             (s = w("p")),
             (i = x()),
