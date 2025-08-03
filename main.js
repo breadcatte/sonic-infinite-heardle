@@ -4581,6 +4581,7 @@ var musicListWithLinks = [
 		url: "https://soundcloud.com/user-675036643/sonic-colors-ost-game-land-5",
 		answer: "Game Land 5 (Aquarium Park) - Sonic Colors (Wii)",
 		},
+		{
 		url: "https://soundcloud.com/quentthequent/sonic-forces-full-infinite-theme-high-quality",
 		answer: "Infinite - Sonic Forces",
 		},
