@@ -844,7 +844,6 @@ var musicNameList = [
 	"Hidden Island (A New Venture remix) - Sonic Rush Adventure",
 	"Atomic Destroyer Zone - Sonic Triple Trouble",
 	"Game Land 5 (Aquarium Park) - Sonic Colors (Wii)",
-	"Character Select - Sonic 06",
     	"Infinite - Sonic Forces",
 	"Character Select - Sonic 06",
 	"World Map (The World Adventure) - Sonic Unleashed",
@@ -4582,11 +4581,6 @@ var musicListWithLinks = [
 		url: "https://soundcloud.com/user-675036643/sonic-colors-ost-game-land-5",
 		answer: "Game Land 5 (Aquarium Park) - Sonic Colors (Wii)",
 		},
-		{
-		url: "https://soundcloud.com/faded_boo/2p-vs-character-select",
-		answer: "Character Select - Sonic 06",
-		},
-		{
 		url: "https://soundcloud.com/quentthequent/sonic-forces-full-infinite-theme-high-quality",
 		answer: "Infinite - Sonic Forces",
 		},
