@@ -206,7 +206,7 @@ var musicNameList = [
 		"Fist Bump - Sonic Forces",
 		"Egg Rocket Zone - Sonic Advance",
 		"Dr. Eggman Showdown (final boss) - Sonic Lost World",
-		"Event: After the Fight (post-boss cutscene) - Sonic Rush",
+		"Theme of After the Fight (Blaze dialogue) - Sonic Rush",
 		"Door Into Summer (Isolated Island 2) - Knuckles' Chaotix",
 		"Boss: Mephiles Phase 2 - Sonic 06",
 		"Mt. Red: A Symbol of Thrill ...for Red Mountain - Sonic Adventure",
@@ -2058,7 +2058,7 @@ var musicListWithLinks = [
 		 },
 		 {
 			url: "https://soundcloud.com/faded_boo/theme-of-after-the-fight",
-		    answer: "Event: After the Fight (post-boss cutscene) - Sonic Rush",
+		    answer: "Theme of After the Fight (Blaze dialogue) - Sonic Rush",
 		 },
 		 {
 			url: "https://soundcloud.com/station-square-radio/door-into-summer",
