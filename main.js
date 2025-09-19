@@ -1247,6 +1247,41 @@ var musicNameList = [
 		"Maybe If... (Amy Mvt.) - Sonic Frontiers: Another Story",
 		"Sandopolis Zone Act 2 - Sonic 3 & Knuckles",
 		"Windmill Village Mode 3 - Sonic Rush Adventure",
+		"Diamond Dust Zone Act 2 - Sonic 3D Blast (16-bit)",
+		"Space Colony ARK: Act 1 (Teddyloid X Jun Senoue Remix) - Shadow Generations",
+		"Mystic Haunt Zone Act 1 - Sonic Rivals 2",
+		"Market Street: Lap Music (Rooftop Run remix) - Team Sonic Racing",
+		"Wacky Workbench (Good Future) - Sonic CD (US)",
+		"Get Edgy (Digital Remakin') - Sonic Rush",
+		"Speed Jungle Zone Act 1 - Sonic Superstars",
+		"Fly Away (Sky Road Zone) - Sonic Runners",
+		"Event: Running Through the Plains (post-Dusty Desert cutscene) - Sonic 06",
+		"System: Select (menu) - Shadow the Hedgehog",
+		"Raisin' Me Up (good ending) - Sonic Rush",
+		"Speed Shoes - Sonic 3D Blast (32-bit)",
+		"Boss - Tails Adventure",
+		"Super Sonic - Sonic 4: Episode 1",
+		"Challenge / Mission 4 ('Balloon Park') - Sonic Generations (consoles/PC)",
+		"Danger in the Sky (Egg Gate QTEs) - Sonic Forces",
+		"Rave About Me (minigame theme: Sonic the Thief, Bungee Jump, Jump the Snake, and Number Jump) - Sonic Shuffle",
+		"34ºN, 12ºE ...for Mad Space - Sonic Adventure 2",
+		"Launch Base Zone Act 2 - Sonic 3 & Knuckles",
+		"Quake Cave - Sonic Drift 2",
+		"Chao Race (Hero) - Sonic Adventure 2",
+		"Angel Island Zone - Super Smash Bros. Brawl",
+		"Aquarium Park Act 3 (Remix) - Sonic Colors: Ultimate",
+		"Intro - Sonic Chaos (Game Gear)",
+		"Trap Tower (Pinball Bonus Stage) - Sonic Mania Plus",
+		"Time Attack Menu - Sonic Advance 2",
+		"Battle with Mega Death Egg Robot (Phase 2) - Sonic Forces",
+		"Vengeance is Mine ...for Radical Highway - Sonic Adventure 2",
+		"Cyber Space 2-1: Slice & Sway - Sonic Frontiers",
+		"Sunset Town ~ Bonus Track 2 (unused) - Sonic the Fighters",
+		"And the Winner Is... (2P Battle results) - Sonic Lost World",
+		"Cyber Space 4-B: Escape the Loop Remix - Sonic Frontiers: Another Story",
+		"Event: Sadness (cutscenes) - Sonic Adventure",
+		"Options (Data Select remix) - Sonic Pocket Adventure",
+		"Main Menu - Sonic Dream Team",
   ];
 
   // Bug : Sometimes musics stops appearing in suggestions, it seems that musics dissapears at the end of the array
@@ -6215,6 +6250,146 @@ var musicListWithLinks = [
 		 {
 			url: "https://soundcloud.com/faded_boo/windmill-village-ver-3",
 		    answer: "Windmill Village Mode 3 - Sonic Rush Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/hh-gregg-427855702/diamond-dust-act-2",
+		    answer: "Diamond Dust Zone Act 2 - Sonic 3D Blast (16-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/cukuwruums_306/sonic-x-shadow-generations-ost",
+		    answer: "Space Colony ARK: Act 1 (Teddyloid X Jun Senoue Remix) - Shadow Generations",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/mystic-haunt-zone-act-1",
+		    answer: "Mystic Haunt Zone Act 1 - Sonic Rivals 2",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/market-street",
+		    answer: "Market Street: Lap Music (Rooftop Run remix) - Team Sonic Racing",
+		 },
+		 {
+			url: "https://soundcloud.com/sonic-cd-us/sonic-cd-us-wacky-workbench-1",
+		    answer: "Wacky Workbench (Good Future) - Sonic CD (US)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/altitude-limit",
+		    answer: "Get Edgy (Digital Remakin') - Sonic Rush",
+		 },
+		 {
+			url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-speed-jungle-act-1",
+		    answer: "Speed Jungle Zone Act 1 - Sonic Superstars",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/fly-away",
+		    answer: "Fly Away (Sky Road Zone) - Sonic Runners",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/event-running-through-the-plains-no-pause-at-start",
+		    answer: "Event: Running Through the Plains (post-Dusty Desert cutscene) - Sonic 06",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/system-select-no-pause-at-start",
+		    answer: "System: Select (menu) - Shadow the Hedgehog",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/ending-2",
+		    answer: "Raisin' Me Up (good ending) - Sonic Rush",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/speed-shoes",
+		    answer: "Speed Shoes - Sonic 3D Blast (32-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/boss-battle-1",
+		    answer: "Boss - Tails Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/super-sonic-no-pause-at-start",
+		    answer: "Super Sonic - Sonic 4: Episode 1",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/mission-4-balloon-park",
+		    answer: "Challenge / Mission 4 ('Balloon Park') - Sonic Generations (consoles/PC)",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/danger-in-the-sky-no-pause-at-start",
+		    answer: "Danger in the Sky (Egg Gate shuttle QTEs) - Sonic Forces",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/rave-about-me",
+		    answer: "Rave About Me (minigame theme: Sonic the Thief, Bungee Jump, Jump the Snake, and Number Jump) - Sonic Shuffle",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/34n-12e-for-mad-space-no-pause-at-start",
+		    answer: "34ºN, 12ºE ...for Mad Space - Sonic Adventure 2",
+		 },
+		 {
+			url: "https://soundcloud.com/rman41/sonic-the-hedgehog-3-launch-base-zone-act-2",
+		    answer: "Launch Base Zone Act 2 - Sonic 3 & Knuckles",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/quake-cave",
+		    answer: "Quake Cave - Sonic Drift 2",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/chao-race-hero",
+		    answer: "Chao Race (Hero) - Sonic Adventure 2",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/angel-island-zone-2",
+		    answer: "Angel Island Zone - Super Smash Bros. Brawl",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/aquarium-park-act-3-remix",
+		    answer: "Aquarium Park Act 3 (Remix) - Sonic Colors: Ultimate",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/01-intro",
+		    answer: "Intro - Sonic Chaos (Game Gear)",
+		 },
+		 {
+			url: "https://soundcloud.com/cream-this-rabbit/pinball-special-stage-trap-tower-sonic-mania-ost",
+		    answer: "Trap Tower (Pinball Bonus Stage) - Sonic Mania Plus",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/time-attack-2",
+		    answer: "Time Attack Menu - Sonic Advance 2",
+		 },
+		 {
+			url: "https://soundcloud.com/user-304781955/sonic-forces-ost-vs-death-egg-robot-phase-2",
+		    answer: "Battle with Mega Death Egg Robot (Phase 2) - Sonic Forces",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/vengeance-is-mine-for-radical-highway-no-intro",
+		    answer: "Vengeance is Mine ...for Radical Highway - Sonic Adventure 2",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/cyber-space-2-1-slice-and-sway-no-pause-at-start",
+		    answer: "Cyber Space 2-1: Slice & Sway - Sonic Frontiers",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/sunset-town-bonus-track-2-no-pause-at-start",
+		    answer: "Sunset Town ~ Bonus Track 2 (unused) - Sonic the Fighters",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/results-and-the-winner-is",
+		    answer: "And the Winner Is... (2P Battle results) - Sonic Lost World",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/cyber-space-4-b-escape-the-loop-remix-reduced-buildup",
+		    answer: "Cyber Space 4-B: Escape the Loop Remix - Sonic Frontiers: Another Story",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/event-sadness-no-pause-at-start",
+		    answer: "Event: Sadness (cutscenes) - Sonic Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/options-5",
+		    answer: "Options (Data Select remix) - Sonic Pocket Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/james-smith-555071498/sonic-dream-team-main-menu",
+		    answer: "Main Menu - Sonic Dream Team",
 		 },
   ];
   shuffleMusic();
