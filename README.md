@@ -1,5 +1,5 @@
 # sonic-infinite-heardle
-edit of etrian-infinite heardle merged with files i could recover from the internet archive for the defunct glitch.me site to produce a new and updated sonic version with songlist from vol 3 being added when i find the time
+edit of etrian-infinite heardle merged with files i could recover from the internet archive for the defunct glitch.me site to produce a new and updated sonic version with songlist from vol 1 and 2, as the original infinite heardle had, with vol3 songlist added and vol 3&k being added when i find the time
 
 sonic heardle originally created by https://twitter.com/laughandpeace11
 
