@@ -7387,7 +7387,7 @@ var musicListWithLinks = [
             M(
               u,
               "class",
-              "font-serif text-3xl font-bold flex-grow text-center flex-1"
+              "font-serif text-3xl font-regular flex-grow text-center flex-1"
             ),
             M(d, "class", "flex flex-1 justify-end"),
             M(
