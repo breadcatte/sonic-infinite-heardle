@@ -10112,9 +10112,6 @@ var musicListWithLinks = [
           },
         },
       })),
-      b.$on("click", (ev) => {
-        onSubmit();
-        e[5]();
       }),
       b.$on("click", e[5]),
       {
