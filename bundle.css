@@ -17,7 +17,9 @@ body {
     margin: 0
 }
 body {
-    font-family: system-ui,
+    font-family: font/Righteous-Regular.woff2
+        font/Righteous-Regular.woff
+        system-ui,
         -apple-system,
         /* Firefox supports this but not yet `system-ui` */
         'Segoe UI',
@@ -668,7 +670,9 @@ video {
     text-align: center
 }
 .font-serif {
-    font-family: Noto Serif Display, ui-serif, Georgia
+    font-family: font/Righteous-Regular.woff2
+        font/Righteous-Regular.woff
+        Noto Serif Display, ui-serif, Georgia
 }
 .text-xs {
     font-size: 0.75rem;
