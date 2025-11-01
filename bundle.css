@@ -15,8 +15,7 @@ body {
     margin: 0
 }
 body {
-    font-family: Righteous
-        src:url("/font/Righteous-Regular.woff2"),
+    font-family: Righteous,
         system-ui,
         -apple-system,
         /* Firefox supports this but not yet `system-ui` */
@@ -28,6 +27,9 @@ body {
         'Apple Color Emoji',
         'Segoe UI Emoji'
 }
+@font-face {
+    font-family: testfont;
+    src: url("fonts/Righteous-Regular.woff2") format("woff2");
 hr {
     height: 0;
     color: inherit
