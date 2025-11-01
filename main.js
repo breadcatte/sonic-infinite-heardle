@@ -8194,7 +8194,7 @@ var musicListWithLinks = [
         c() {
           (t = w("p")),
             (t.textContent =
-              "There was an error loading the player. Please reload and try\n                again."),
+              "There was an error loading the player.\n Please reload and try again."),
             (n = x()),
             (r = w("div")),
             Q(s.$$.fragment),
@@ -8326,6 +8326,7 @@ var musicListWithLinks = [
       v,
       k,
       b,
+      volumeControl,
       S,
       D,
       Y,
@@ -8382,6 +8383,25 @@ var musicListWithLinks = [
             (v = w("div")),
             (k = _(A)),
             (b = x()),
+				
+            (volumeDiv = w("div")),
+            (volumeIcon = w("button")),
+            M(volumeIcon, "style", "margin-right: 15px; border: none;"),
+            (volumeSvg = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "svg"
+            )),
+            M(volumeSvg, "viewBox", "0 0 24 24"),
+            M(volumeSvg, "width", "24"),
+            M(volumeSvg, "height", "24"),
+            (volumeSvg.innerHTML =
+              "<path d='M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z' style='fill: white;'></path>"),
+            M(volumeSvg, "class", "volume-icon"),
+            M(volumeDiv, "class", "item2"),
+            M(volumeDiv, "style", "display: flex; align-items: center;"),
+            (volumeControl = w("div")),
+            M(volumeControl, "class", "volume-control"),
+			  
             (S = w("div")),
             Q(D.$$.fragment),
             (Y = x()),
@@ -8394,9 +8414,12 @@ var musicListWithLinks = [
             M(i, "class", "h-3 w-full relative overflow-hidden "),
             M(r, "class", "max-w-screen-sm w-full mx-auto px-3 flex-col"),
             M(n, "class", "border-t border-custom-line"),
-            M(m, "class", "flex items-center"),
-            M(S, "class", "flex justify-center items-center p-1"),
-            M(f, "class", "flex justify-between items-center"),
+			  
+            M(m, "class", "flex items-center item1"),
+            M(S, "class", "flex justify-center items-center p-1 item3"),
+            M(f, "class", "container"),
+            M(C, "class", "item4 "),
+			  
             M(h, "class", "px-3 "),
             M(d, "class", "max-w-screen-sm w-full mx-auto flex-col"),
             M(c, "class", "border-t border-custom-line");
@@ -8417,7 +8440,175 @@ var musicListWithLinks = [
             p(d, h),
             p(h, f),
             p(f, m),
-            p(m, v),
+            p(m, v);
+
+          if (!/Mobi/i.test(window.navigator.userAgent)) {
+            f.classList.add("with-volume");
+            p(f, volumeDiv), p(volumeDiv, volumeIcon), p(volumeIcon, volumeSvg);
+
+            // Create the slider container
+            const sliderContainer = document.createElement("div");
+            sliderContainer.className = "volume-control";
+            p(volumeDiv, sliderContainer);
+
+            // Create the slider
+            const slider = document.createElement("div");
+            slider.className = "slider";
+            slider.setAttribute("role", "slider");
+            slider.setAttribute("aria-label", "Volume");
+            slider.setAttribute("aria-valuemin", "0");
+            slider.setAttribute("aria-valuemax", "100");
+            slider.setAttribute("aria-valuenow", "50");
+            slider.setAttribute("tabindex", "0");
+            p(sliderContainer, slider);
+
+            // Create the slider fill
+            const sliderFill = document.createElement("div");
+            sliderFill.className = "slider-fill";
+            p(slider, sliderFill);
+
+            // Create the slider thumb
+            const sliderThumb = document.createElement("div");
+            sliderThumb.className = "slider-thumb";
+            p(slider, sliderThumb);
+
+            let isDragging = false;
+
+            const startDragging = () => {
+              isDragging = true;
+              volumeIcon.style.pointerEvents = "none";
+            };
+
+            const stopDragging = () => {
+              isDragging = false;
+              volumeIcon.style.pointerEvents = "auto";
+            };
+
+            const updateSlider = (clientX) => {
+              const rect = slider.getBoundingClientRect();
+              let value = Math.max(
+                0,
+                Math.min(100, ((clientX - rect.left) / rect.width) * 100)
+              );
+              value = Math.round(value);
+              sliderFill.style.width = `${value}%`;
+              sliderThumb.style.left = `${value}%`;
+              slider.setAttribute("aria-valuenow", value);
+
+              // Update volume for SoundCloud widget
+              if (window.SC && window.SC.Widget) {
+                const widget = SC.Widget(document.querySelector("iframe"));
+                widget.setVolume(value);
+              }
+
+
+
+              // Update mute icon
+              updateMuteIcon(value);
+            };
+
+            const updateMuteIcon = (value) => {
+              const path = volumeSvg.querySelector("path");
+              let line = volumeSvg.querySelector("line");
+
+              if (value === 0) {
+                if (!line) {
+                  line = document.createElementNS(
+                    "http://www.w3.org/2000/svg",
+                    "line"
+                  );
+                  line.setAttribute("x1", "1");
+                  line.setAttribute("y1", "1");
+                  line.setAttribute("x2", "23");
+                  line.setAttribute("y2", "23");
+                  line.setAttribute("style", "stroke: white; stroke-width: 2");
+                  volumeSvg.appendChild(line);
+                }
+              } else {
+                if (line) {
+                  volumeSvg.removeChild(line);
+                }
+              }
+
+              // Update the path (if needed)
+              path.setAttribute(
+                "d",
+                "M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+              );
+              path.setAttribute("style", "fill: white");
+            };
+
+            slider.addEventListener("mousedown", (e) => {
+              if (isDragging) {
+                e.preventDefault();
+                e.stopPropagation();
+              }
+              isDragging = true;
+              updateSlider(e.clientX);
+              e.preventDefault(); // Prevent text selection
+            });
+
+            document.addEventListener("mousemove", (e) => {
+              if (isDragging) {
+                updateSlider(e.clientX);
+                e.preventDefault(); // Prevent text selection
+              }
+            });
+
+            document.addEventListener("mouseup", () => {
+              isDragging = false;
+            });
+
+            slider.addEventListener("click", (e) => {
+              updateSlider(e.clientX);
+            });
+
+            slider.addEventListener("keydown", (e) => {
+              let value = parseInt(slider.getAttribute("aria-valuenow"));
+              switch (e.key) {
+                case "ArrowRight":
+                case "ArrowUp":
+                  value = Math.min(100, value + 5);
+                  break;
+                case "ArrowLeft":
+                case "ArrowDown":
+                  value = Math.max(0, value - 5);
+                  break;
+                case "Home":
+                  value = 0;
+                  break;
+                case "End":
+                  value = 100;
+                  break;
+                default:
+                  return;
+              }
+              updateSlider(
+                slider.getBoundingClientRect().left +
+                  (value / 100) * slider.offsetWidth
+              );
+              e.preventDefault();
+            });
+
+            volumeIcon.addEventListener("click", () => {
+              const currentValue = parseInt(
+                slider.getAttribute("aria-valuenow")
+              );
+              updateSlider(
+                slider.getBoundingClientRect().left +
+                  ((currentValue === 0 ? 50 : 0) / 100) * slider.offsetWidth
+              );
+            });
+
+            // Initialize slider
+            updateSlider(
+              slider.getBoundingClientRect().left +
+                (50 / 100) * slider.offsetWidth
+            );
+          } else {
+            f.classList.add("without-volume");
+          }
+			
             p(v, k),
             p(f, b),
             p(f, S),
@@ -10071,7 +10262,7 @@ var musicListWithLinks = [
     P(() => {
       !(function () {
         const e = new wt({
-          placeHolder: "Know it? Search for the artist / title",
+          placeHolder: "Know it? Search for the game / title",
           threshold: 1,
           wrapper: !1,
           resultsList: {
@@ -11129,7 +11320,7 @@ var musicListWithLinks = [
       a = e[1].attemptIntervalAlt[e[0].length - 1] / 1e3 > 1 ? "s" : "";
     return {
       c() {
-        (t = _("You got this " + artist + " song within ")),
+        (t = _("Hey, let's play again some other time! You got this " + artist + " song within ")),
           (n = _(o)),
           (r = _("\n                second")),
           (s = _(a)),
@@ -11160,7 +11351,7 @@ var musicListWithLinks = [
     let n;
     return {
       c() {
-        n = _("You didn't get this " + artist + " song.");
+        n = _("You didn't get this " + artist + " song. I'm outta here!");
       },
       m(e, t) {
         g(e, n, t);
