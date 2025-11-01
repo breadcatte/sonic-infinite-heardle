@@ -10112,7 +10112,6 @@ var musicListWithLinks = [
           },
         },
       })),
-      }),
       b.$on("click", e[5]),
       {
         c() {
