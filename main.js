@@ -8194,7 +8194,7 @@ var musicListWithLinks = [
         c() {
           (t = w("p")),
             (t.textContent =
-              "There was an error loading the player.\n Please reload and try again."),
+              "There was an error loading the player. Please reload and try\n                again."),
             (n = x()),
             (r = w("div")),
             Q(s.$$.fragment),
@@ -8343,7 +8343,6 @@ var musicListWithLinks = [
             : e[3]
         ) + "",
       N = !e[12] && 1 == e[0] && tt();
-
     function H(e, t) {
       return e[4].isPrime ? rt : nt;
     }
@@ -8383,7 +8382,6 @@ var musicListWithLinks = [
             (v = w("div")),
             (k = _(A)),
             (b = x()),
-				
             (volumeDiv = w("div")),
             (volumeIcon = w("button")),
             M(volumeIcon, "style", "margin-right: 15px; border: none;"),
@@ -8401,7 +8399,6 @@ var musicListWithLinks = [
             M(volumeDiv, "style", "display: flex; align-items: center;"),
             (volumeControl = w("div")),
             M(volumeControl, "class", "volume-control"),
-			  
             (S = w("div")),
             Q(D.$$.fragment),
             (Y = x()),
@@ -8414,12 +8411,10 @@ var musicListWithLinks = [
             M(i, "class", "h-3 w-full relative overflow-hidden "),
             M(r, "class", "max-w-screen-sm w-full mx-auto px-3 flex-col"),
             M(n, "class", "border-t border-custom-line"),
-			  
             M(m, "class", "flex items-center item1"),
             M(S, "class", "flex justify-center items-center p-1 item3"),
             M(f, "class", "container"),
             M(C, "class", "item4 "),
-			  
             M(h, "class", "px-3 "),
             M(d, "class", "max-w-screen-sm w-full mx-auto flex-col"),
             M(c, "class", "border-t border-custom-line");
@@ -8441,7 +8436,6 @@ var musicListWithLinks = [
             p(h, f),
             p(f, m),
             p(m, v);
-
           if (!/Mobi/i.test(window.navigator.userAgent)) {
             f.classList.add("with-volume");
             p(f, volumeDiv), p(volumeDiv, volumeIcon), p(volumeIcon, volumeSvg);
@@ -8500,8 +8494,6 @@ var musicListWithLinks = [
                 const widget = SC.Widget(document.querySelector("iframe"));
                 widget.setVolume(value);
               }
-
-
 
               // Update mute icon
               updateMuteIcon(value);
@@ -8608,8 +8600,7 @@ var musicListWithLinks = [
           } else {
             f.classList.add("without-volume");
           }
-			
-            p(v, k),
+          p(v, k),
             p(f, b),
             p(f, S),
             ee(D, S, null),
@@ -10121,6 +10112,10 @@ var musicListWithLinks = [
           },
         },
       })),
+      b.$on("click", (ev) => {
+        _onSubmit();
+        e[5]();
+      }),
       b.$on("click", e[5]),
       {
         c() {
@@ -10651,13 +10646,13 @@ var musicListWithLinks = [
       c() {
         (n = w("div")),
           (n.innerHTML =
-            '<ul style="list-style-type: disc;margin-left: 20px;font-size: 12px;display: grid;justify-content: center;">' +
+            '<ul style="list-style-type: disc;margin-center: 20px;font-size: 24px;display: grid;justify-content: center;">' +
             musicNameListFiltered
               .map(
                 (s, i) =>
                   "<li" +
                   (diffArtist[i] && !allDifferent
-                    ? ' style="margin-top:10px"'
+                    ? ' style="margin-top:15px"'
                     : "") +
                   '><a target="_blank" href="' +
                   mapUrl.get(s) +
