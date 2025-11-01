@@ -1282,6 +1282,33 @@ var musicNameList = [
 		"Event: Sadness (cutscenes) - Sonic Adventure",
 		"Options (Data Select remix) - Sonic Pocket Adventure",
 		"Main Menu - Sonic Dream Team",
+		"Rusty Ruin Zone Act 2 - Sonic 3D Blast (32-bit)",
+		"Enemy: WOLF - Sonic Frontiers",
+		"Tropical Resort Act 2 - Sonic Colors (Wii)",
+		"Marble Zone (unused) - Sonic the Hedgehog (8-bit)",
+		"Crazy Robo ...Boss: E-101R - Sonic Adventure",
+		"Mini-Boss - Sonic & Knuckles and Sonic 3 & Knuckles",
+		"Drowning - Sonic the Hedgehog (16-bit)",
+		"Hyper Eggrobo (Pinch, final boss) - Sonic Advance 3",
+		"Game Over (Masa's Demo version) - Sonic the Hedgehog (16-bit)",
+		"Spagonia (Night) - Sonic Unleashed",
+		"Egg Destroyer (final boss) - Sonic Rivals",
+		"Silver Castle Zone - Sonic Blast",
+		"Boss Battle 1 (mini-boss) - Sonic Superstars",
+		"Ocean Base Act 3 - Sonic Advance 3",
+		"Oriental Legend (final boss) - Knuckles' Chaotix",
+		"Boss (Pinch) - Sonic Advance 2",
+		"Cutscene: Eggman's Buttons Pushed (post-Frozen Factory Zone 2) - Sonic Lost World",
+		"Theme of Sand Ruins (also Dark Desert) - Sonic Riders",
+		"Advertise: Prof. Omochao (tutorial menu) - Sonic Adventure 2",
+		"Sonic After (6290 Mix) - Sonic Gems Collection",
+		"Strange Parade (Halloween event) - Sonic Runners",
+		"Cyber Space 1-6: Go Back 2 Your Roots - Sonic Frontiers",
+		"General Offensive ...for Sky Deck - Sonic Adventure",
+		"Event: Metal Sonic... The Ultimate Overlord (pre-final boss cutscene) - Sonic Heroes",
+		"Final Fever - Sonic CD (JP/EU)",
+		"End Roll Medley ver. 2 (credits) - Sonic Generations (3DS)",
+		]),
   ];
 
   // Bug : Sometimes musics stops appearing in suggestions, it seems that musics dissapears at the end of the array
@@ -6390,6 +6417,110 @@ var musicListWithLinks = [
 		 {
 			url: "https://soundcloud.com/james-smith-555071498/sonic-dream-team-main-menu",
 		    answer: "Main Menu - Sonic Dream Team",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/rusty-ruin-zone-act-3",
+		    answer: "Rusty Ruin Zone Act 2 - Sonic 3D Blast (32-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/enemy-wolf-no-pause-at-start",
+		    answer: "Enemy: WOLF - Sonic Frontiers",
+		 },
+		 {
+			url: "https://soundcloud.com/user-104488217/tropical-resort-act-2",
+		    answer: "Tropical Resort Act 2 - Sonic Colors (Wii)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/marble-unused",
+		    answer: "Marble Zone (unused) - Sonic the Hedgehog (8-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/user-427276937-751822898/56-crazy-robo-boss-e-101-beta",
+		    answer: "Crazy Robo ...Boss: E-101R - Sonic Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/act-1-boss-sk",
+		    answer: "Mini-Boss - Sonic & Knuckles and Sonic 3 & Knuckles",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/drowning-3",
+		    answer: "Drowning - Sonic the Hedgehog (16-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/final-boss-pinch-1",
+		    answer: "Hyper Eggrobo (Pinch, final boss) - Sonic Advance 3",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/game-over-masas-demo-version",
+		    answer: "Game Over (Masa's Demo version) - Sonic the Hedgehog (16-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/spagonia-night",
+		    answer: "Spagonia (Night) - Sonic Unleashed",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/meteor-base-zone-final-boss",
+			answer: "Egg Destroyer (final boss) - Sonic Rivals",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/silver-castle-zone",
+			answer: "Silver Castle Zone - Sonic Blast",
+		 },
+		 {
+			url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-mini-boss-theme",
+			answer: "Boss Battle 1 (mini-boss) - Sonic Superstars",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/ocean-base-act-3",
+			answer: "Ocean Base Act 3 - Sonic Advance 3",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/oriental-legend",
+			answer: "Oriental Legend (final boss) - Knuckles' Chaotix",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/boss-pinch-2",
+			answer: "Boss (Pinch) - Sonic Advance 2",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/cutscene-eggmans-buttons-pushed-less-buildup-at-start",
+			answer: "Cutscene: Eggman's Buttons Pushed (post-Frozen Factory Zone 2) - Sonic Lost World",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/theme-of-sand-ruins-no-pause-at-start",
+			answer: "Theme of Sand Ruins (also Dark Desert) - Sonic Riders",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/prof-omochao-no-pause-at-start",
+			answer: "Advertise: Prof. Omochao (tutorial menu) - Sonic Adventure 2",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sonic-after-6290-mix",
+			answer: "Sonic After (6290 Mix) - Sonic Gems Collection",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/strange-parade",
+			answer: "Strange Parade (Halloween event) - Sonic Runners",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/cyber-space-1-6-go-back-2-your-roots-no-pause-at-start",
+			answer: "Cyber Space 1-6: Go Back 2 Your Roots - Sonic Frontiers",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/general-offensive-for-sky-deck-less-buildup-at-start",
+			answer: "General Offensive ...for Sky Deck - Sonic Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/event-metal-sonic-the-ultimate-overlord-less-buildup-at-start",
+			answer: "Event: Metal Sonic... The Ultimate Overlord (pre-final boss cutscene) - Sonic Heroes",
+		 },
+		 {
+			url: "https://soundcloud.com/sonic-cd-best-sonic-2/2-09-final-fever",
+			answer: "Final Fever - Sonic CD (JP/EU)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/credits-4",
+			answer: "End Roll Medley ver. 2 (credits) - Sonic Generations (3DS)",
 		 },
   ];
   shuffleMusic();
