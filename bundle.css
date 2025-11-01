@@ -668,8 +668,8 @@ video {
     text-align: center
 }
 .font-serif {
-    font-family: font/Righteous-Regular.woff2
-        font/Righteous-Regular.woff
+    font-family:  Righteous
+        src:url("/font/Righteous-Regular.woff2"),
         Noto Serif Display, ui-serif, Georgia
 }
 .text-xs {
