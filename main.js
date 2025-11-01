@@ -10261,7 +10261,7 @@ var musicListWithLinks = [
           threshold: 1,
           wrapper: !1,
           resultsList: {
-            maxResults: 10,
+            maxResults: 100,
           },
           diacritics: !0,
           noresults: !0,
