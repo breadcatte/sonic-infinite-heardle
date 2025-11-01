@@ -1308,7 +1308,6 @@ var musicNameList = [
 		"Event: Metal Sonic... The Ultimate Overlord (pre-final boss cutscene) - Sonic Heroes",
 		"Final Fever - Sonic CD (JP/EU)",
 		"End Roll Medley ver. 2 (credits) - Sonic Generations (3DS)",
-		]),
   ];
 
   // Bug : Sometimes musics stops appearing in suggestions, it seems that musics dissapears at the end of the array
