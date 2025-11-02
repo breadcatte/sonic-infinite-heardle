@@ -14,10 +14,6 @@ html {
 body {
     margin: 0
 }
-@font-face {
-    font-family: Righteous;
-    src: url("/font/Righteous-Regular.woff2") format("woff2");
-}
 body {
     font-family: Righteous,
         system-ui,
@@ -30,6 +26,10 @@ body {
         sans-serif,
         'Apple Color Emoji',
         'Segoe UI Emoji'
+}
+@font-face {
+    font-family: Righteous;
+    src: url("font/Righteous-Regular.woff2") format("woff2");
 }
 hr {
     height: 0;
@@ -151,7 +151,7 @@ ul {
     padding: 0
 }
 html {
-    font-family: Noto Sans, ui-sans-serif, system-ui;
+    font-family: Righteous, Noto Sans, ui-sans-serif, system-ui;
     line-height: 1.5
 }
 body {
