@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif+Display:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 *,
 ::before,
 ::after {
@@ -26,10 +26,6 @@ body {
         sans-serif,
         'Apple Color Emoji',
         'Segoe UI Emoji'
-}
-@font-face {
-    font-family: Righteous;
-    src: url("font/Righteous-Regular.woff2") format("woff2");
 }
 hr {
     height: 0;
