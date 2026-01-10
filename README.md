@@ -20,13 +20,10 @@ HOW TO MAKE YOUR OWN INFINITE HEARDLE (UDPATED on **2026/01/09**)
 4. Open the **index.html** file & replace **"Etrian Odyssey"** with the artist/genre of your heardle.
 5. In the **index.html** file, you can update the image that gets shared with your link by updating lines **18-27**.
 6. You can update the icon in your browser's tab by updating the favicon.png image.
-
-(Items 7-12 are all edits to the **main.js file**)
-
 7. On line **2** of **main.js** file and update **artist** with the **artist/genre** of your heardle - This will update all the text boxes & titles where "Etrian Odyssey" shows up up
-8. On line **2** of **musics.js**, "const **allTags**" is initialized. It allows to use a tag system to filter musics. You can replace them with [] if you don't want to use tags.
-9. On line **5** of **musics.js**, "var **musicNameList**" is initialized. Replace the text with a list of {id: number, name: "music title"}, name being the music titles that you want to show up as options in your Heardle and id an unique number for the music. Music titles should follow the format **"music - Artist/Game".** Make sure each music is in quotes and has a comma after it.
-10. On line **1427** of **musics.js**, "var **musicListWithLinks**" is initialized. Here you'll have to replace the links with links to your musics. Only Soundcloud links at the moment. Each link will have to follow the following format: **`{ url: "<link>", answer: id of the music },`**. Make sure to have **at least 10 musics** in your lists otherwise you'll run into issues with the search bar!
+8. On line **2** of **music-list.js**, "const **allTags**" is initialized. It allows to use a tag system to filter musics. You can replace them with [] if you don't want to use tags.
+9. On line **5** of **music-list.js**, "var **musicNameList**" is initialized. Replace the text with a list of {id: number, name: "music title"}, name being the music titles that you want to show up as options in your Heardle and id an unique number for the music. Music titles should follow the format **"music - Artist/Game".** Make sure each music is in quotes and has a comma after it.
+10. On line **1** of **music-links.js**, "var **musicListWithLinks**" is initialized. Here you'll have to replace the links with links to your musics. Only Soundcloud links at the moment. Each link will have to follow the following format: **`{ url: "<link>", answer: id of the music },`**. Make sure to have **at least 10 musics** in your lists otherwise you'll run into issues with the search bar!
 11. If you want to edit the text in the **info button (About)** on the top left, in **main.js**, around **line 4066**, you can update the text that shows up there. Search for **"A clone of..."** to find the line easier.
 12. If you want to edit the text in the **heart button** next to the info button, in **main.js**, around **line 4543**, you can update the text that shows up there. Search for **"Have questions..."** to find the line easier.
 

@@ -11,7 +11,7 @@ var app = (function () {
     removeTags = JSON.parse(localStorage.getItem("removeTags"));
   }
 
-  // allTags, musicNameList and musicListWithLinks are defined in musics.js
+  // allTags, musicNameList are defined in music-list.js and musicListWithLinks is defined in music-links.js
 
   let filteredMusicNameList = [];
 
