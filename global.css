@@ -66,3 +66,62 @@ button:focus-visible {
 button:not(:disabled):active {
     background-color: #dddddd;
 }
+
+.volume-button {
+    margin-right: 15px;
+}
+
+.volume-button:focus-visible {
+    margin-right: 14px;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+}
+
+.container.with-volume {
+    grid-template-columns: 1fr 1fr 2fr 3fr;
+}
+
+.container.without-volume {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.volume-control {
+    width: 100px;
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    height: 8px;
+    background-color: grey;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.slider:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 1px #d3d3d3;
+}
+
+.slider-fill {
+    position: absolute;
+    height: 100%;
+    background-color: Green;
+    border-radius: 2px;
+}
+
+.slider-thumb {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: LimeGreen;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}

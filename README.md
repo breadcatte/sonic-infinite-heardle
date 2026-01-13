@@ -2,7 +2,7 @@
 
 A clone of [Heardle](https://www.heardle.app/), and [K-Pop Heardle](https://heardle-kpop.glitch.me/) which can be played infinitely and with Etrian Odyssey's musics. Based on [Joywave Heardle](https://joywave-heardle.glitch.me/)
 
-Each music is randomly chosen from Etrian Odyssey's soundtrack.
+Each music is randomly chosen from Etrian Odyssey's soundtrack. The code for the volume bar come from [Video Games Infinite Heardle](https://keraloon.github.io/infinitevideogame/).
 
 code edited from: [WJSN Heardle](https://github.com/jeroldcamacho/wjsn-heardle)
 <br />

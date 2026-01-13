@@ -1958,6 +1958,7 @@ var app = (function () {
       v,
       k,
       b,
+      volumeControl,
       S,
       D,
       Y,
@@ -2014,6 +2015,21 @@ var app = (function () {
             (v = w("div")),
             (k = _(A)),
             (b = x()),
+            (volumeDiv = w("div")),
+            (volumeIcon = w("button")),
+            M(volumeIcon, "class", "border-none volume-button"),
+            (volumeSvg = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "svg"
+            )),
+            M(volumeSvg, "viewBox", "0 0 24 24"),
+            M(volumeSvg, "width", "24"),
+            M(volumeSvg, "height", "24"),
+            (volumeSvg.innerHTML =
+              "<path d='M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z' style='fill: white;'></path>"),
+            M(volumeDiv, "style", "display: flex; align-items: center;"),
+            (volumeControl = w("div")),
+            M(volumeControl, "class", "volume-control"),
             (S = w("div")),
             Q(D.$$.fragment),
             (Y = x()),
@@ -2028,7 +2044,9 @@ var app = (function () {
             M(n, "class", "border-t border-custom-line"),
             M(m, "class", "flex items-center"),
             M(S, "class", "flex justify-center items-center p-1"),
-            M(f, "class", "flex justify-between items-center"),
+            M(S, "style", "justify-self: center"),
+            M(f, "class", "container"),
+            M(C, "style", "justify-self: right"),
             M(h, "class", "px-3 "),
             M(d, "class", "max-w-screen-sm w-full mx-auto flex-col"),
             M(c, "class", "border-t border-custom-line");
@@ -2049,8 +2067,162 @@ var app = (function () {
             p(d, h),
             p(h, f),
             p(f, m),
-            p(m, v),
-            p(v, k),
+            p(m, v);
+          if (!/Mobi/i.test(window.navigator.userAgent)) {
+            f.classList.add("with-volume");
+            p(f, volumeDiv), p(volumeDiv, volumeIcon), p(volumeIcon, volumeSvg);
+
+            // Create the slider container
+            const sliderContainer = document.createElement("div");
+            sliderContainer.className = "volume-control";
+            p(volumeDiv, sliderContainer);
+
+            // Create the slider
+            const slider = document.createElement("div");
+            slider.className = "slider";
+            slider.setAttribute("role", "slider");
+            slider.setAttribute("aria-label", "Volume");
+            slider.setAttribute("aria-valuemin", "0");
+            slider.setAttribute("aria-valuemax", "100");
+            slider.setAttribute("aria-valuenow", "50");
+            slider.setAttribute("tabindex", "0");
+            p(sliderContainer, slider);
+
+            // Create the slider fill
+            const sliderFill = document.createElement("div");
+            sliderFill.className = "slider-fill";
+            p(slider, sliderFill);
+
+            // Create the slider thumb
+            const sliderThumb = document.createElement("div");
+            sliderThumb.className = "slider-thumb";
+            p(slider, sliderThumb);
+
+            let isDragging = false;
+
+            const updateSlider = (clientX) => {
+              const rect = slider.getBoundingClientRect();
+              let value = Math.max(
+                0,
+                Math.min(100, ((clientX - rect.left) / rect.width) * 100)
+              );
+              value = Math.round(value);
+              sliderFill.style.width = `${value}%`;
+              sliderThumb.style.left = `${value}%`;
+              slider.setAttribute("aria-valuenow", value);
+
+              // Update volume for SoundCloud widget
+              if (window.SC && window.SC.Widget) {
+                const widget = SC.Widget(document.querySelector("iframe"));
+                widget.setVolume(value);
+              }
+
+              // Update mute icon
+              updateMuteIcon(value);
+            };
+
+            const updateMuteIcon = (value) => {
+              const path = volumeSvg.querySelector("path");
+              let line = volumeSvg.querySelector("line");
+
+              if (value === 0) {
+                if (!line) {
+                  line = document.createElementNS(
+                    "http://www.w3.org/2000/svg",
+                    "line"
+                  );
+                  line.setAttribute("x1", "1");
+                  line.setAttribute("y1", "1");
+                  line.setAttribute("x2", "23");
+                  line.setAttribute("y2", "23");
+                  line.setAttribute("style", "stroke: white; stroke-width: 2");
+                  volumeSvg.appendChild(line);
+                }
+              } else {
+                if (line) {
+                  volumeSvg.removeChild(line);
+                }
+              }
+
+              // Update the path (if needed)
+              path.setAttribute(
+                "d",
+                "M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+              );
+              path.setAttribute("style", "fill: white");
+            };
+
+            slider.addEventListener("mousedown", (e) => {
+              if (isDragging) {
+                e.preventDefault();
+                e.stopPropagation();
+              }
+              isDragging = true;
+              updateSlider(e.clientX);
+              e.preventDefault(); // Prevent text selection
+            });
+
+            document.addEventListener("mousemove", (e) => {
+              if (isDragging) {
+                updateSlider(e.clientX);
+                e.preventDefault(); // Prevent text selection
+              }
+            });
+
+            document.addEventListener("mouseup", () => {
+              isDragging = false;
+            });
+
+            slider.addEventListener("click", (e) => {
+              updateSlider(e.clientX);
+            });
+
+            slider.addEventListener("keydown", (e) => {
+              let value = parseInt(slider.getAttribute("aria-valuenow"));
+              switch (e.key) {
+                case "ArrowRight":
+                case "ArrowUp":
+                  value = Math.min(100, value + 5);
+                  break;
+                case "ArrowLeft":
+                case "ArrowDown":
+                  value = Math.max(0, value - 5);
+                  break;
+                case "Home":
+                  value = 0;
+                  break;
+                case "End":
+                  value = 100;
+                  break;
+                default:
+                  return;
+              }
+              updateSlider(
+                slider.getBoundingClientRect().left +
+                (value / 100) * slider.offsetWidth
+              );
+              e.preventDefault();
+            });
+
+            volumeIcon.addEventListener("click", () => {
+              const currentValue = parseInt(
+                slider.getAttribute("aria-valuenow")
+              );
+              updateSlider(
+                slider.getBoundingClientRect().left +
+                ((currentValue === 0 ? 50 : 0) / 100) * slider.offsetWidth
+              );
+            });
+
+            // Initialize slider
+            updateSlider(
+              slider.getBoundingClientRect().left +
+              (50 / 100) * slider.offsetWidth
+            );
+          } else {
+            f.classList.add("without-volume");
+          }
+          p(v, k),
             p(f, b),
             p(f, S),
             ee(D, S, null),
@@ -3946,9 +4118,11 @@ var app = (function () {
                 i,
                 "class",
                 "pointer-events-auto modal w-full limit-height mx-auto top-20 relative rounded-sm " +
-                (e[0] == "about" || e[0] == "Filter"
-                  ? "max-w-screen-sm"
-                  : "max-w-screen-xs")
+                (e[0] == "Filter"
+                  ? "max-w-screen-md"
+                  : e[0] == "about"
+                    ? "max-w-screen-sm"
+                    : "max-w-screen-xs")
               ),
             M(i, "role", "dialog"),
             M(i, "aria-modal", "true"),
