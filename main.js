@@ -25,6 +25,10 @@ var app = (function () {
     })
   );
 
+  // To store userStats in a different place if several heardles are hosted in the same domain
+  const url = window.location.href.replace(/^\/+|\/+$/g, '').split("/")
+  const userStatsPrefix = url[url.length - 1] + "-userStats"
+
   shuffleMusic();
   let filteredMusicListWithLinks = [];
   filterMusicLists();
@@ -6533,8 +6537,8 @@ var app = (function () {
     P(() => {
       p();
     });
-    if (null == localStorage.getItem("userStats")) {
-      (h = []), localStorage.setItem("userStats", JSON.stringify(h));
+    if (null == localStorage.getItem(userStatsPrefix)) {
+      (h = []), localStorage.setItem(userStatsPrefix, JSON.stringify(h));
       firstLoad = false;
     } else {
       if (firstLoad) {
@@ -6542,14 +6546,14 @@ var app = (function () {
         filterMusicLists();
         firstLoad = false;
       } else {
-        h = JSON.parse(localStorage.getItem("userStats"));
+        h = JSON.parse(localStorage.getItem(userStatsPrefix));
       }
       f = h.find((e) => e.id === l.id);
     }
     void 0 === f &&
       ((f = l),
         h.push(f),
-        localStorage.setItem("userStats", JSON.stringify(h)));
+        localStorage.setItem(userStatsPrefix, JSON.stringify(h)));
     let g,
       y,
       v = f.guessList,
@@ -6657,14 +6661,14 @@ var app = (function () {
             }))
           ),
           n(5, (f.guessList = v), f),
-          localStorage.setItem("userStats", JSON.stringify(h)),
+          localStorage.setItem(userStatsPrefix, JSON.stringify(h)),
           (v.length != Vt.maxAttempts && 1 != s) ||
           ((o = s),
             n(8, (w.gameIsActive = !1), w),
             n(5, (f.hasFinished = !0), f),
             n(5, (f.gotCorrect = o), f),
             n(5, (f.score = v.length), f),
-            localStorage.setItem("userStats", JSON.stringify(h)),
+            localStorage.setItem(userStatsPrefix, JSON.stringify(h)),
             i.resetAndPlay(),
             o
               ? (pe("wonGame", {
