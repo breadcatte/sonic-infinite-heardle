@@ -2,13 +2,20 @@ var app = (function () {
   var artist = "Etrian Odyssey";
   var currentIndex = 0;
 
+  // To store userStats and tags in a different attribute in local storage if several heardles are hosted in the same domain
+  let url = window.location.href.replace(/^\/+|\/+$/g, '').split("/")
+  url = url[url.length - 1]
+  const userStatsLocationStorage = url + "-userStats"
+
+  const removeGamesLocationStorage = url + "-removeGames"
   let removeGames = [];
-  if (localStorage.getItem("removeGames")) {
-    removeGames = JSON.parse(localStorage.getItem("removeGames"));
+  if (localStorage.getItem(removeGamesLocationStorage)) {
+    removeGames = JSON.parse(localStorage.getItem(removeGamesLocationStorage));
   }
+  const removeTagsLocationStorage = url + "-removeTags"
   let removeTags = [];
-  if (localStorage.getItem("removeTags")) {
-    removeTags = JSON.parse(localStorage.getItem("removeTags"));
+  if (localStorage.getItem(removeTagsLocationStorage)) {
+    removeTags = JSON.parse(localStorage.getItem(removeTagsLocationStorage));
   }
 
   // allTags, musicNameList are defined in music-list.js and musicListWithLinks is defined in music-links.js
@@ -24,10 +31,6 @@ var app = (function () {
       tags: allTags,
     })
   );
-
-  // To store userStats in a different place if several heardles are hosted in the same domain
-  const url = window.location.href.replace(/^\/+|\/+$/g, '').split("/")
-  const userStatsPrefix = url[url.length - 1] + "-userStats"
 
   shuffleMusic();
   let filteredMusicListWithLinks = [];
@@ -77,12 +80,12 @@ var app = (function () {
     let removedTagsList = removeTags.map((i) => allTags[i]);
     if (gameList.length == removedGameList.length) {
       removeGames = [];
-      localStorage.setItem("removeGames", "[]");
+      localStorage.setItem(removeGamesLocationStorage, "[]");
       removedGameList = [];
     }
     if (allTags.length == removedTagsList.length) {
       removeTags = [];
-      localStorage.setItem("removeTags", "[]");
+      localStorage.setItem(removeTagsLocationStorage, "[]");
       removedTagsList = [];
     }
     filteredMusicNameList = musicNameList.filter(
@@ -96,9 +99,9 @@ var app = (function () {
     if (filteredMusicNameList.every((m) => m.id == -1)) {
       filteredMusicNameList = musicNameList;
       removeGames = [];
-      localStorage.setItem("removeGames", "[]");
+      localStorage.setItem(removeGamesLocationStorage, "[]");
       removeTags = [];
-      localStorage.setItem("removeTags", "[]");
+      localStorage.setItem(removeTagsLocationStorage, "[]");
     }
     const idMusic = new Set(filteredMusicNameList.map((x) => x.id));
     filteredMusicListWithLinks = musicListWithLinks.filter((x) =>
@@ -108,13 +111,13 @@ var app = (function () {
 
   function saveFilteredGames(filteredGames) {
     removeGames = filteredGames;
-    localStorage.setItem("removeGames", JSON.stringify(filteredGames)),
+    localStorage.setItem(removeGamesLocationStorage, JSON.stringify(filteredGames)),
       window.location.reload();
   }
 
   function saveFilteredTags(filteredTags) {
     removeTags = filteredTags;
-    localStorage.setItem("removeTags", JSON.stringify(filteredTags)),
+    localStorage.setItem(removeTagsLocationStorage, JSON.stringify(filteredTags)),
       window.location.reload();
   }
 
@@ -6537,8 +6540,8 @@ var app = (function () {
     P(() => {
       p();
     });
-    if (null == localStorage.getItem(userStatsPrefix)) {
-      (h = []), localStorage.setItem(userStatsPrefix, JSON.stringify(h));
+    if (null == localStorage.getItem(userStatsLocationStorage)) {
+      (h = []), localStorage.setItem(userStatsLocationStorage, JSON.stringify(h));
       firstLoad = false;
     } else {
       if (firstLoad) {
@@ -6546,14 +6549,14 @@ var app = (function () {
         filterMusicLists();
         firstLoad = false;
       } else {
-        h = JSON.parse(localStorage.getItem(userStatsPrefix));
+        h = JSON.parse(localStorage.getItem(userStatsLocationStorage));
       }
       f = h.find((e) => e.id === l.id);
     }
     void 0 === f &&
       ((f = l),
         h.push(f),
-        localStorage.setItem(userStatsPrefix, JSON.stringify(h)));
+        localStorage.setItem(userStatsLocationStorage, JSON.stringify(h)));
     let g,
       y,
       v = f.guessList,
@@ -6661,14 +6664,14 @@ var app = (function () {
             }))
           ),
           n(5, (f.guessList = v), f),
-          localStorage.setItem(userStatsPrefix, JSON.stringify(h)),
+          localStorage.setItem(userStatsLocationStorage, JSON.stringify(h)),
           (v.length != Vt.maxAttempts && 1 != s) ||
           ((o = s),
             n(8, (w.gameIsActive = !1), w),
             n(5, (f.hasFinished = !0), f),
             n(5, (f.gotCorrect = o), f),
             n(5, (f.score = v.length), f),
-            localStorage.setItem(userStatsPrefix, JSON.stringify(h)),
+            localStorage.setItem(userStatsLocationStorage, JSON.stringify(h)),
             i.resetAndPlay(),
             o
               ? (pe("wonGame", {
