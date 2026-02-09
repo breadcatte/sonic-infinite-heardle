@@ -1407,7 +1407,6 @@ var musicNameList = [
 		"Chao Network - Sonic Adventure 2",
 		"Title Screen - Sonic Jump (2005)",
 		"Sonic Heroes (Demo) - Sonic Heroes",
-			]),
   ];
 
   // Bug : Sometimes musics stops appearing in suggestions, it seems that musics dissapears at the end of the array
