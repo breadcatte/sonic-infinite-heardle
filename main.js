@@ -1308,6 +1308,105 @@ var musicNameList = [
 		"Event: Metal Sonic... The Ultimate Overlord (pre-final boss cutscene) - Sonic Heroes",
 		"Final Fever - Sonic CD (JP/EU)",
 		"End Roll Medley ver. 2 (credits) - Sonic Generations (3DS)",
+				"Title Screen (Game Gear)/Intro (Master System) - Sonic 2 (8-bit)",
+		"Plant Kingdom Act 2 - Sonic Rush Adventure",
+		"Event: The Soleanna Festival (intro cutscene) - Sonic 06",
+		"Amy's Room - Sonic Battle",
+		"Title - Sonic Advance 2",
+		"Blast Town ('80s Boulevard/'90s Boulevard) - Sonic Riders: Zero Gravity",
+		"Sonic Heroes (Ultimate Figure Skating) - Mario & Sonic at the Olympic Winter Games (DS)",
+		"Competition Menu - Sonic 3 & Knuckles",
+		"Island Mystery: Hacking Mission - Sonic Frontiers",
+		"Rail Canyon: Act 1 - Shadow Generations",
+		"Bridge Island Zone Act 2 - Sonic Superstars",
+		"Save Screen - Sonic Colors (Wii)",
+		"Chao Playground - Sonic Advance 3",
+		"Milky Way - Sonic Drift 2",
+		"Crystal Mountain Zone Act 1 - Sonic Rivals",
+		"Sky Sanctuary: Act 2 (Modern) - Sonic Generations (consoles/PC)",
+		"Event: Conquest (cutscene, Eggman destroys the moon) - Sonic Adventure 2",
+		"Puzzle Mode - Sonic Eraser",
+		"Back 2 Back (Water Palace; Blazy Mix) - Sonic Rush",
+		"Oil Desert Zone Act 2 - Sonic 4: Episode 2",
+		"Fist Bump: Piano ver. (Theater) - Sonic Forces",
+		"Cyber Space (CrossWorlds Remix; specifically 1-2: Flowing) - Sonic Racing: CrossWorlds",
+		"Star Light Zone - Sonic the Hedgehog (16-bit)",
+		"Sky Road: Bonus Stage (Zone ?) - Sonic Lost World",
+		"Central City - Shadow the Hedgehog",
+		"Event: Kick the Eggman (post-boss cutscene for Blaze) - Sonic Rush",
+		"Happy Theme - Sonic Battle",
+		"Bad Ending - Sonic 3D Blast (32-bit)",
+		"Eggman's Tower - SegaSonic the Hedgehog",
+		"Theme of Egg Factory (also Ice Factory) - Sonic Riders",
+		"Chaotic Inferno Zone Act 2 - Sonic Rivals 2",
+		"Egg Rocket Zone Boss - Sonic Advance",
+		"Special Stage (2D) - Sonic Triple Trouble",
+		"Toy Kingdom Act 2 - Sonic Advance 3",
+		"Game Land 3 (Starlight Carnival) - Sonic Colors (Wii)",
+		"Quartz Quadrant (Good Future) - Sonic CD (JP/EU)",
+		"Credits - Sonic Pocket Adventure",
+		"Sonic (6290 Mix) - Sonic Gems Collection",
+		"Stardust Speedway Zone Act 2 - Sonic Mania",
+		"Terminal Velocity Act 1 (Remix) - Sonic Colors: Ultimate",
+		"Gene Gadget Zone Act 1 - Sonic 3D Blast (16-bit)",
+		"Stages 5-8 - Dr. Robotnik's Mean Bean Machine (16-bit)",
+		"Aquarium Park Act 2 - Sonic Colors (DS)",
+		"Metallic Madness (Good Future) - Sonic CD (US)",
+		"Golden Capital Zone Act 1 - Sonic Superstars",
+		"Green Hill Zone - Sonic the Hedgehog (Sonic Cafe, mobile)",
+		"Sunset Heights: Act 1 - Shadow Generations",
+		"Magical Snow Day (Frozen Factory; Christmas event) - Sonic Runners",
+		"Glimmering Gift (Super Transformation) - Sonic Mania",
+		"Techno Base Act 2 - Sonic Advance 2",
+		"Wrapped in Black (Digital Remakin') - Sonic Rush (album remix)",
+		"Extras (Sonic 3&K file select remix) - Sonic Jam",
+		"Lake Crystal - Tails Adventure",
+		"Boss Battle: Egg Emperor - Sonic Generations (3DS)",
+		"Event: Happy (Yacker's Plea arrangement) - Sonic Colors (DS)",
+		"Club Rouge - Sonic Battle",
+		"Gumballs - Sonic's Schoolhouse",
+		"Free (Crush 40 Version) - Sonic Free Riders (album remix)",
+		"Moonrise (Newtrogic High Zone: Night) - Knuckles' Chaotix",
+		"Planet Wisp Act 2 - Sonic Colors (DS)",
+		"Scrap Brain - Sonic Drift",
+		"Crystal Mountain Zone Act 2 - Sonic Rivals",
+		"Knuckles Part 1 (Sonic 3 remix) - Sonic Pocket Adventure",
+		"Sonic Heroes (30th Anniversary Ver.) - Sonic 30th Anniversary Symphony (Live)",
+		"Title Screen - Sonic Superstars",
+		"Casino Paradise Zone Act 2 - Sonic Advance",
+		"Dream Discus: Windy Valley: The Air - Mario & Sonic at the London 2012 Olympic Games (Wii)",
+		"Planet Wisp Act 2 (Remix) - Sonic Colors: Ultimate",
+		"Neo Green Hill Zone - Sonic Pinball Party",
+		"Invincibility - Sonic & Knuckles (and Sonic 3 & Knuckles)",
+		"Stars in the Sky (credits) - Sonic the Hedgehog 2 movie OST (2022)",
+		"Museum (intro remix) - Sonic Origins",
+		"Gigantic Angel Zone Boss (Sonic & Knuckles remix) - Sonic Pocket Adventure",
+		"Death Prison (Death Egg) - Sonic Forces",
+		"Crystal Nightmare (Techno Tower boss) - Knuckles' Chaotix",
+		"Scrambled Shores - Sonic Dream Team",
+		"Collision Chaos (Present) - Sonic CD (US)",
+		"Special Stage - Sonic Superstars",
+		"Sonic Goes (UG Mix) - Sonic Gems Collection",
+		"Mystic Ruins - Sonic Chronicles: The Dark Brotherhood",
+		"Metal Knuckles (Phase 2) - Sonic Advance",
+		"Jingle: Invincible ver. 2 (Modern) - Sonic Generations (consoles/PC)",
+		"Guardian: SHARK - Sonic Frontiers",
+		"Lovely Gate 3 ...for Egg Quarters - Sonic Adventure 2",
+		"Starlight Carnival Mission - Sonic Colors (DS)",
+		"Extra Zone Intro: Anxiety (pre-true final boss cutscene) - Sonic Rush",
+		"Bingo Party: Lap Music (Bingo Highway remix) - Team Sonic Racing",
+		"Chemical Flow (Chemical Plant) - Sonic Forces",
+		"Special Stage (Pinch) - Sonic Advance 2",
+		"Frozen Base Zone Act 'Tails' - Sonic Superstars",
+		"Final Stage - Dr. Robotnik's Mean Bean Machine (8-bit)",
+		"Seaside Island (Map) - Sonic Boom: Fire & Ice",
+		"Big Arms - Sonic Mania Adventures",
+		"Labyrinth of the Sea - Sonic Labyrinth",
+		"Launch Base Zone Act 1 (prototype version) - Sonic 3",
+		"Chun-nan (Day) - Sonic Unleashed",
+		"Chao Network - Sonic Adventure 2",
+		"Title Screen - Sonic Jump (2005)",
+		"Sonic Heroes (Demo) - Sonic Heroes",
   ];
 
   // Bug : Sometimes musics stops appearing in suggestions, it seems that musics dissapears at the end of the array
@@ -6521,7 +6620,403 @@ var musicListWithLinks = [
 			url: "https://soundcloud.com/faded_boo/credits-4",
 			answer: "End Roll Medley ver. 2 (credits) - Sonic Generations (3DS)",
 		 },
-  ];
+		 {
+			url: "https://soundcloud.com/faded_boo/intro-15",
+			answer: "Title Screen (Game Gear)/Intro (Master System) - Sonic 2 (8-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/plant-kingdom-act-2",
+			answer: "Plant Kingdom Act 2 - Sonic Rush Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/event-the-soleanna-festival-1",
+			answer: "Event: The Soleanna Festival (intro cutscene) - Sonic 06",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/amys-room",
+			answer: "Amy's Room - Sonic Battle",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/title-screen-5",
+			answer: "Title - Sonic Advance 2",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/blast-town-no-pause-at-start",
+			answer: "Blast Town ('80s Boulevard/'90s Boulevard) - Sonic Riders: Zero Gravity",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/dream-skating-ultimate-figure-skating-sonic-heroes-sonic-heroes",
+			answer: "Sonic Heroes (Ultimate Figure Skating) - Mario & Sonic at the Olympic Winter Games (DS)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/competition-menu",
+			answer: "Competition Menu - Sonic 3 & Knuckles",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/island-mystery-hacking-mission-no-pause-at-start",
+			answer: "Island Mystery: Hacking Mission - Sonic Frontiers",
+		 },
+		 {
+			url: "https://soundcloud.com/shadow-generations/rail-canyon-act-1-26", 
+			answer: "Rail Canyon: Act 1 - Shadow Generations",
+		 },
+		 {
+			url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-bridge-island-act-2",
+			answer: "Bridge Island Zone Act 2 - Sonic Superstars",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/save-screen-no-pause-at-start",
+			answer: "Save Screen - Sonic Colors (Wii)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/chao-playground",
+			answer: "Chao Playground - Sonic Advance 3",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/milky-way",
+			answer: "Milky Way - Sonic Drift 2",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/crystal-mountain-zone-act-1",
+			answer: "Crystal Mountain Zone Act 1 - Sonic Rivals",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/sky-sanctuary-act-2-no-pause-at-start",
+			answer: "Sky Sanctuary: Act 2 (Modern) - Sonic Generations (consoles/PC)",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/event-conquest-no-pause-at-start",
+			answer: "Event: Conquest (cutscene, Eggman destroys the moon) - Sonic Adventure 2",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/puzzle-mode",
+			answer: "Puzzle Mode - Sonic Eraser",
+		 },
+		 {
+			url: "https://soundcloud.com/fawfulhasfury/19-back-2-back-blazy-mix-sonic",
+			answer: "Back 2 Back (Water Palace; Blazy Mix) - Sonic Rush",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/oil-desert-zone-act-2-no-pause-at-start",
+			answer: "Oil Desert Zone Act 2 - Sonic 4: Episode 2",
+		 },
+		 {
+			url: "https://soundcloud.com/user-589094375-799140624/sonic-forces-ost-theater-fist-bump-piano",
+			answer: "Fist Bump: Piano ver. (Theater) - Sonic Forces",
+		 },
+		 {
+			url: "https://soundcloud.com/sktachi10/cyber-space-first-lap-hq-sonic",
+			answer: "Cyber Space (CrossWorlds Remix; specifically 1-2: Flowing) - Sonic Racing: CrossWorlds",
+		 },
+		 {
+			url: "https://soundcloud.com/super-sonic-speed-4-reel/star-light-zone",
+			answer: "Star Light Zone - Sonic the Hedgehog (16-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sky-road-bonus-stage",
+			answer: "Sky Road: Bonus Stage - Sonic Lost World",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/central-city-no-pause-at-start",
+			answer: "Central City - Shadow the Hedgehog",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/event-kick-the-eggman",
+			answer: "Event: Kick the Eggman (post-boss cutscene for Blaze) - Sonic Rush",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/happy-theme",
+			answer: "Happy Theme - Sonic Battle",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/bad-ending-3",
+			answer: "Bad Ending - Sonic 3D Blast (32-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/eggmans-tower-no-pause-at-start",
+			answer: "Eggman's Tower - SegaSonic the Hedgehog",
+		 },
+		 {
+			url: "https://soundcloud.com/sega104059/theme-of-egg-factory",
+			answer: "Theme of Egg Factory (also Ice Factory) - Sonic Riders",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/chaotic-inferno-zone-act-2",
+			answer: "Chaotic Inferno Zone Act 2 - Sonic Rivals 2",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/boss-6",
+			answer: "Egg Rocket Zone Boss - Sonic Advance",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/2d-bonus-stage",
+			answer: "Special Stage (2D) - Sonic Triple Trouble",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/toy-kingdom-act-2",
+			answer: "Toy Kingdom Act 2 - Sonic Advance 3",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/game-land-3",
+			answer: "Game Land 3 (Starlight Carnival) - Sonic Colors (Wii)",
+		 },
+		 {
+			url: "https://soundcloud.com/sonic-cd-the-best-sonic/1-20-quartz-quadrant-g-mix-jp",
+			answer: "Quartz Quadrant (Good Future) - Sonic CD (JP/EU)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/credits-17",
+			answer: "Credits - Sonic Pocket Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sonic-6290-mix",
+			answer: "Sonic (6290 Mix) - Sonic Gems Collection",
+		 },
+		 {
+			url: "https://soundcloud.com/cream-this-rabbit/stardust-speedway-zone-act-2-sonic-mania-ost",
+			answer: "Stardust Speedway Zone Act 2 - Sonic Mania",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/terminal-velocity-act-1-remix",
+			answer: "Terminal Velocity Act 1 (Remix) - Sonic Colors: Ultimate",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/gene-gadget-zone-act-1",
+			answer: "Gene Gadget Zone Act 1 - Sonic 3D Blast (16-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/stages-5-8",
+			answer: "Stages 5-8 - Dr. Robotnik's Mean Bean Machine (16-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/aquarium-park-act-6",
+			answer: "Aquarium Park Act 2 - Sonic Colors (DS)",
+		 },
+		 {
+			url: "https://soundcloud.com/sonic-cd-us/sonic-cd-us-metallic-madness-1",
+			answer: "Metallic Madness (Good Future) - Sonic CD (US)",
+		 },
+		 {
+			url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-golden-capital-act-1",
+			answer: "Golden Capital Zone Act 1 - Sonic Superstars",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/green-hill-zone-9",
+			answer: "Green Hill Zone - Sonic the Hedgehog (Sonic Cafe, mobile)",
+		 },
+		 {
+			url: "https://soundcloud.com/sonicfrontiera2022/sunset-heights-sonic-x-shadow",
+			answer: "Sunset Heights: Act 1 - Shadow Generations",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/magical-snow-day",
+			answer: "Magical Snow Day (Frozen Factory; Christmas event) - Sonic Runners",
+		 },
+		 {
+			url: "https://soundcloud.com/sonic-mania-456108433/sonic-mania-super-sonic",
+			answer: "Glimmering Gift (Super Transformation) - Sonic Mania",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/techno-base-act-2",
+			answer: "Techno Base Act 2 - Sonic Advance 2",
+		 },
+		 {
+			url: "https://soundcloud.com/fawfulhasfury/7-wrapped-in-black-sonic-rush",
+			answer: "Wrapped in Black (Digital Remakin') - Sonic Rush (album remix)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/extras",
+			answer: "Extras (Sonic 3&K file select remix) - Sonic Jam",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/lake-crystal",
+			answer: "Lake Crystal - Tails Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/egg-emperor-1",
+			answer: "Boss Battle: Egg Emperor - Sonic Generations (3DS)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/cutscene-yackers-plea",
+			answer: "Event: Happy (Yacker's Plea arrangement) - Sonic Colors (DS)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/club-rouge",
+			answer: "Club Rouge - Sonic Battle",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/gumballs",
+			answer: "Gumballs - Sonic's Schoolhouse",
+		 },
+		 {
+			url: "https://soundcloud.com/crush40-music/free-crush-40-version",
+			answer: "Free (Crush 40 Version) - Sonic Free Riders (album remix)",
+		 },
+		 {
+			url: "https://soundcloud.com/skyanultra/knuckles-chaotix-moonrise",
+			answer: "Moonrise (Newtrogic High Zone: Night) - Knuckles' Chaotix",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/planet-wisp-act-8",
+			answer: "Planet Wisp Act 2 - Sonic Colors (DS)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/scrap-brain",
+			answer: "Scrap Brain - Sonic Drift",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/crystal-mountain-zone-act-2",
+			answer: "Crystal Mountain Zone Act 2 - Sonic Rivals",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/knuckles-part-1",
+			answer: "Knuckles Part 1 (Sonic 3 remix) - Sonic Pocket Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sonic-heroes-30th-anniversary-ver",
+			answer: "Sonic Heroes (30th Anniversary Ver.) - Sonic 30th Anniversary Symphony (Live)",
+		 },
+		 {
+			url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-title-screen",
+			answer: "Title Screen - Sonic Superstars",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sonic-advance-ost-casino",
+			answer: "Casino Paradise Zone Act 2 - Sonic Advance",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/dream-discus-windy-valley",
+			answer: "Dream Discus: Windy Valley: The Air - Mario & Sonic at the London 2012 Olympic Games (Wii)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/planet-wisp-act-2-remix",
+			answer: "Planet Wisp Act 2 (Remix) - Sonic Colors: Ultimate",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/neo-green-hill-zone",
+			answer: "Neo Green Hill Zone - Sonic Pinball Party",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/invincibility-21341689",
+			answer: "Invincibility - Sonic & Knuckles (and Sonic 3 & Knuckles)",
+		 },
+		 {
+			url: "https://soundcloud.com/cudderland/kid-cudi-stars-in-the-sky",
+			answer: "Stars in the Sky (credits) - Sonic the Hedgehog 2 movie OST (2022)",
+		 },
+		 {
+			url: "https://soundcloud.com/lochlinb/sonic_origins_museum_theme",
+			answer: "Museum (intro remix) - Sonic Origins",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/gigantic-angel-zone-boss",
+			answer: "Gigantic Angel Zone Boss (Sonic & Knuckles remix) - Sonic Pocket Adventure",
+		 },
+		 {
+			url: "https://soundcloud.com/user-304781955/sonic-forces-ost-death-egg",
+			answer: "Death Prison (Death Egg) - Sonic Forces",
+		 },
+		 {
+			url: "https://soundcloud.com/skyanultra/knuckles-chaotix-crystal",
+			answer: "Crystal Nightmare (Techno Tower boss) - Knuckles' Chaotix",
+		 },
+		 {
+			url: "https://soundcloud.com/james-smith-555071498/scrambled-shores-act-1-2-3",
+			answer: "Scrambled Shores - Sonic Dream Team",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/collision-chaos-present-2",
+			answer: "Collision Chaos (Present) - Sonic CD (US)",
+		 },
+		 {
+			url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-special-stage",
+			answer: "Special Stage - Sonic Superstars",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sonic-goes-ug-mix",
+			answer: "Sonic Goes (UG Mix) - Sonic Gems Collection",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/mystic-ruins",
+			answer: "Mystic Ruins - Sonic Chronicles: The Dark Brotherhood", 
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/metal-knuckles-phase-2",
+			answer: "Metal Knuckles (Phase 2) - Sonic Advance",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/jingle-invincible-ver-2-no-pause-at-start",
+			answer: "Jingle: Invincible ver. 2 (Modern) - Sonic Generations (consoles/PC)",
+		 },
+		 {
+			url: "https://soundcloud.com/radio-free-mobius/guardian-shark-no-pause-at-start",
+			answer: "Guardian: SHARK - Sonic Frontiers",
+		 },
+		 {
+			url: "https://soundcloud.com/cesar-stone-junior/lovely-gate-3-egg-quarters",
+			answer: "Lovely Gate 3 ...for Egg Quarters - Sonic Adventure 2",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/starlight-carnival-act-5?in=faded_boo/sets/sonic-colors-ds",
+			answer: "Starlight Carnival Mission - Sonic Colors (DS)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/extra-zone-intro-anxiety",
+			answer: "Extra Zone Intro: Anxiety (pre-true final boss cutscene) - Sonic Rush",
+		 },
+		 {
+			url: "https://soundcloud.com/user-486021283/team-sonic-racing-bingo-party",
+			answer: "Bingo Party: Lap Music (Bingo Highway remix) - Team Sonic Racing",
+		 },
+		 {
+			url: "https://soundcloud.com/sonicbuxx/chemical-flow-chemical-plant",
+			answer: "Chemical Flow (Chemical Plant) - Sonic Forces",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/special-stage-pinch",
+			answer: "Special Stage (Pinch) - Sonic Advance 2",
+		 },
+		 {
+			url: "https://soundcloud.com/leonel-cisneros-378688411/sonic-superstars-ost-frozen-base-act-tails",
+			answer: "Frozen Base Zone Act 'Tails' - Sonic Superstars",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/06-robotnik",
+			answer: "Final Stage - Dr. Robotnik's Mean Bean Machine (8-bit)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/seaside-island",
+			answer: "Seaside Island (Map) - Sonic Boom: Fire & Ice",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/big-arms-1",
+			answer: "Big Arms - Sonic Mania Adventures",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/act-2",
+			answer: "Labyrinth of the Sea - Sonic Labyrinth",
+		 },
+		 {
+			url: "https://soundcloud.com/schisms-253727092/launch-base-zone-act-1-sonic-3",
+			answer: "Launch Base Zone Act 1 (prototype version) - Sonic 3",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/chun-nan-day",
+			answer: "Chun-nan (Day) - Sonic Unleashed",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/chao-network",
+			answer: "Chao Network - Sonic Adventure 2",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sonic-jump-music-main-theme-2005-java-version",
+			answer: "Title Screen - Sonic Jump (2005)",
+		 },
+		 {
+			url: "https://soundcloud.com/faded_boo/sonic-heroes-demo-version",
+			answer: "Sonic Heroes (Demo) - Sonic Heroes",
+		 },
+      ],
   shuffleMusic();
   var firstLoad = true;
 
