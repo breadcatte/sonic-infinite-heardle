@@ -7016,7 +7016,8 @@ var musicListWithLinks = [
 			url: "https://soundcloud.com/faded_boo/sonic-heroes-demo-version",
 			answer: "Sonic Heroes (Demo) - Sonic Heroes",
 		 },
-      ],
+  ];
+	
   shuffleMusic();
   var firstLoad = true;
 
