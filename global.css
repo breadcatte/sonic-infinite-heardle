@@ -1,4 +1,49 @@
 html,
+* {
+  cursor: url(images/cursor/tails0.png), auto;
+  -webkit-animation: cursor 2000ms infinite;
+  animation: cursor 2000ms infinite;
+}
+
+@-webkit-keyframes cursor {
+  0% {cursor: url(images/cursor/tails1.png), auto;}
+  6.25% {cursor: url(images/cursor/tails1.png), auto;}
+  12.5% {cursor: url(images/cursor/tails2.png), auto;}
+  18.75% {cursor: url(images/cursor/tails3.png), auto;}
+  25% {cursor: url(images/cursor/tails4.png), auto;}
+  31.25% {cursor: url(images/cursor/tails5.png), auto;}
+  37.5% {cursor: url(images/cursor/tails6.png), auto;}
+  43.75% {cursor: url(images/cursor/tails7.png), auto;}
+  50% {cursor: url(images/cursor/tails8.png), auto;}
+  56.25% {cursor: url(images/cursor/tails9.png), auto;}
+  62.5% {cursor: url(images/cursor/tails10.png), auto;}
+  68.75% {cursor: url(images/cursor/tails11.png), auto;}
+  75% {cursor: url(images/cursor/tails12.png), auto;}
+  81.25% {cursor: url(images/cursor/tails13.png), auto;}
+  87.5% {cursor: url(images/cursor/tails14.png), auto;}
+  93.75% {cursor: url(images/cursor/tails0.png), auto;}
+  100% {cursor: url(images/cursor/tails0.png), auto;}
+} 
+
+@keyframes cursor {
+  0% {cursor: url(images/cursor/tails1.png), auto;}
+  6.25% {cursor: url(images/cursor/tails1.png), auto;}
+  12.5% {cursor: url(images/cursor/tails2.png), auto;}
+  18.75% {cursor: url(images/cursor/tails3.png), auto;}
+  25% {cursor: url(images/cursor/tails4.png), auto;}
+  31.25% {cursor: url(images/cursor/tails5.png), auto;}
+  37.5% {cursor: url(images/cursor/tails6.png), auto;}
+  43.75% {cursor: url(images/cursor/tails7.png), auto;}
+  50% {cursor: url(images/cursor/tails8.png), auto;}
+  56.25% {cursor: url(images/cursor/tails9.png), auto;}
+  62.5% {cursor: url(images/cursor/tails10.png), auto;}
+  68.75% {cursor: url(images/cursor/tails11.png), auto;}
+  75% {cursor: url(images/cursor/tails12.png), auto;}
+  81.25% {cursor: url(images/cursor/tails13.png), auto;}
+  87.5% {cursor: url(images/cursor/tails14.png), auto;}
+  93.75% {cursor: url(images/cursor/tails0.png), auto;}
+  100% {cursor: url(images/cursor/tails0.png), auto;}
+}
 body {
     position: relative;
     width: 100%;
